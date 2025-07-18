@@ -1,30 +1,34 @@
 import reactLogo from "./assets/react.svg"; // delete this
 import viteLogo from "/vite.svg"; // delete this
 import "./App.css";
-import Hero from "./subComponents/Hero";
-import TrendingProduct from "./subComponents/TrendingProduct";
-import ProductFeatures from "./subComponents/ProductFeatures";
-import PromotionalBanner from "./subComponents/PromotionalBanner";
-import QandA from "./subComponents/QandA";
-import AboutUs from "./subComponents/AboutUs";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+
 import NavContainer from "./components/NavContainer";
 import Footer from "./components/Footer";
+import StorePage from "./components/StorePage";
+import MainPage from "./components/MainPage";
+import Taknon from "./components/Taknon";
+import Negishot from "./components/Negishot";
+import DeliveryPolicy from "./components/DeliveryPolicy";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
     <>
-      {/* nav */}
-      <NavContainer />
-      {/* checking for the main page  */}
-      <Hero />
-      <TrendingProduct />
-      <ProductFeatures />
-      <PromotionalBanner />
-      <AboutUs />
-      <QandA />
-      {/*  */}
-      {/* footer */}
-      <Footer />
+      <Router>
+        <NavContainer />
+
+        <Routes>
+          <Route path="/*" element={<ErrorPage />} />
+
+          <Route path="/" element={<MainPage />} />
+          <Route path="/shop" element={<StorePage />} />
+          <Route path="/takanon" element={<Taknon />} />
+          <Route path="/negishot" element={<Negishot />} />
+          <Route path="/delivery-policy" element={<DeliveryPolicy />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

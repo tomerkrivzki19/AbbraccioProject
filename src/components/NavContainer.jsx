@@ -27,7 +27,7 @@ const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
 const navigation = {
   categories: [
     {
-      name: "Women",
+      name: "/",
       featured: [
         { name: "Sleep", href: "#" },
         { name: "Swimwear", href: "#" },
@@ -55,7 +55,7 @@ const navigation = {
       ],
     },
     {
-      name: "Men",
+      name: "/",
       featured: [
         { name: "Casual", href: "#" },
         { name: "Boxers", href: "#" },
@@ -84,15 +84,16 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
+    { name: "delivery-policy", href: "/delivery-policy" },
+    { name: "takanon", href: "/takanon" },
+    { name: "Stores", href: "/shop" },
   ],
 };
 function NavContainer() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white fixed z-10 w-full">
+    <div className="bg-white fixed z-10 w-full ">
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
@@ -345,7 +346,7 @@ function NavContainer() {
                 <div className="flex h-16 items-center justify-between">
                   {/* Logo (lg+) */}
                   <div className="hidden lg:flex lg:items-center">
-                    <a href="#">
+                    <a href="/">
                       <span className="sr-only">Your Company</span>
                       <img
                         alt=""
