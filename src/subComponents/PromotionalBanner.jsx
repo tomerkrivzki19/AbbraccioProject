@@ -2,7 +2,7 @@ import React from "react";
 
 function PromotionalBanner() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-hidden">
       <figure className="w-full">
         <img
           className="w-full h-auto object-cover"

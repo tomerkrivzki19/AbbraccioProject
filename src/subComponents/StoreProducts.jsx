@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+
 const products = [
   {
     id: 1,
@@ -68,10 +69,21 @@ const products = [
   },
 ];
 function StoreProducts() {
+  const containersRef = useRef([]);
+
+  // Toggle active class on tap for mobile
+  function toggleActive(index, e) {
+    // Prevent link navigation on first tap
+    e.preventDefault();
+    const el = containersRef.current[index];
+    if (!el) return;
+    el.classList.toggle("active");
+  }
+
   return (
     <div className="bg-white">
       {/* py-16 sm:px-6 sm:py-24 lg:px-8 */}
-      <div className="mx-auto max-w-7xl overflow-hidden px-4 ">
+      {/* <div className="mx-auto max-w-7xl overflow-hidden px-4 " dir="rtl">
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
           {products.map((product) => (
             <a key={product.id} href={product.href} className="group text-sm">
@@ -84,6 +96,56 @@ function StoreProducts() {
               <p className="italic text-gray-500">{product.availability}</p>
               <p className="mt-2 font-medium text-gray-900">{product.price}</p>
             </a>
+          ))}
+        </div>
+      </div> */}
+      <div className="mx-auto max-w-7xl overflow-hidden px-4" dir="rtl">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="group relative text-sm"
+              tabIndex={0}
+            >
+              <div className="relative h-[380px] w-full rounded-lg overflow-hidden">
+                <img
+                  alt={product.imageAlt}
+                  src={product.imageSrc}
+                  className="h-full w-full object-cover transition duration-300
+              group-hover:opacity-80
+              group-focus-within:opacity-80
+              group-active:opacity-80"
+                />
+
+                {/* <div
+                  className="absolute bottom-0 left-0 w-full translate-y-full opacity-0 transition-all duration-300 ease-in-out bg-white/90
+            group-hover:translate-y-0 group-hover:opacity-100
+            group-focus-within:translate-y-0 group-focus-within:opacity-100
+            group-active:translate-y-0 group-active:opacity-100"
+                >
+                  <button className="w-full py-2 text-center text-sm font-semibold border-t border-gray-200 hover:bg-black hover:text-white transition duration-300 cursor-pointer">
+                    הוסף לסל
+                  </button>
+                </div> */}
+                <div
+                  className="absolute bottom-0 left-0 w-full
+    translate-y-0 opacity-100
+    sm:translate-y-full sm:opacity-0
+    transition-all duration-300 ease-in-out bg-white/90
+    sm:group-hover:translate-y-0 sm:group-hover:opacity-100
+    sm:group-focus-within:translate-y-0 sm:group-focus-within:opacity-100
+    sm:group-active:translate-y-0 sm:group-active:opacity-100"
+                >
+                  <button className="w-full py-2 text-center text-sm font-semibold border-t border-gray-200 hover:bg-black hover:text-white transition duration-300 cursor-pointer">
+                    הוסף לסל
+                  </button>
+                </div>
+              </div>
+
+              <h3 className="mt-4 font-medium text-gray-900">{product.name}</h3>
+              <p className="italic text-gray-500">{product.availability}</p>
+              <p className="mt-2 font-medium text-gray-900">{product.price}</p>
+            </div>
           ))}
         </div>
       </div>

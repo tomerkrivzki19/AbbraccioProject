@@ -30,13 +30,13 @@ const sortOptions = [
   { name: "Price: Low to High", href: "#", current: false },
   { name: "Price: High to Low", href: "#", current: false },
 ];
-const subCategories = [
-  { name: "Totes", href: "#" },
-  { name: "Backpacks", href: "#" },
-  { name: "Travel Bags", href: "#" },
-  { name: "Hip Bags", href: "#" },
-  { name: "Laptop Sleeves", href: "#" },
-];
+// const subCategories = [
+//   { name: "Totes", href: "#" },
+//   { name: "Backpacks", href: "#" },
+//   { name: "Travel Bags", href: "#" },
+//   { name: "Hip Bags", href: "#" },
+//   { name: "Laptop Sleeves", href: "#" },
+// ];
 const filters = [
   {
     id: "color",
@@ -123,7 +123,7 @@ function StorePage() {
               {/* Filters */}
               <form className="mt-4 border-t border-gray-200">
                 <h3 className="sr-only">Categories</h3>
-                <ul role="list" className="px-2 py-3 font-medium text-gray-900">
+                {/* <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
                       <a href={category.href} className="block px-2 py-3">
@@ -131,13 +131,15 @@ function StorePage() {
                       </a>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
 
+                {/* small sizes */}
                 {filters.map((section) => (
                   <Disclosure
                     key={section.id}
                     as="div"
-                    className="border-t border-gray-200 px-4 py-6"
+                    className="border-t border-gray-200 px-4 py-6 z-50"
+                    dir="rtl"
                   >
                     <h3 className="-mx-2 -my-3 flow-root">
                       <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
@@ -277,7 +279,7 @@ function StorePage() {
               {/* Filters */}
               <form className="hidden lg:block">
                 <h3 className="sr-only">Categories</h3>
-                <ul
+                {/* <ul
                   role="list"
                   className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
                 >
@@ -286,8 +288,10 @@ function StorePage() {
                       <a href={category.href}>{category.name}</a>
                     </li>
                   ))}
-                </ul>
-
+                </ul> */}
+                <h1 className="text-2xl font-bold tracking-tight text-gray-900">
+                  filters
+                </h1>
                 {filters.map((section) => (
                   <Disclosure
                     key={section.id}

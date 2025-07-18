@@ -23,7 +23,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
+// const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
 const navigation = {
   categories: [
     {
@@ -93,7 +93,7 @@ function NavContainer() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white fixed z-10 w-full ">
+    <div className="bg-white fixed z-40 w-full ">
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
@@ -246,7 +246,7 @@ function NavContainer() {
               ))}
             </div>
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
                   href="#"
@@ -263,10 +263,10 @@ function NavContainer() {
                   Sign in
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              {/* Currency selector */}
+            {/* Currency selector */}
+            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <form>
                 <div className="-ml-2 inline-grid grid-cols-1">
                   <select
@@ -285,7 +285,7 @@ function NavContainer() {
                   />
                 </div>
               </form>
-            </div>
+            </div> */}
           </DialogPanel>
         </div>
       </Dialog>
@@ -297,7 +297,7 @@ function NavContainer() {
             <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               {/* Currency selector */}
               <form className="hidden lg:block lg:flex-1">
-                <form>
+                {/* <form>
                   <div className="-ml-2 inline-grid grid-cols-1">
                     <select
                       id="desktop-currency"
@@ -314,14 +314,17 @@ function NavContainer() {
                       className="pointer-events-none col-start-1 row-start-1 mr-1 size-5 self-center justify-self-end fill-gray-300"
                     />
                   </div>
-                </form>
+                </form> */}
               </form>
 
-              <p className="flex-1 text-center text-sm font-medium text-white lg:flex-none">
-                Get free delivery on orders over $100
+              {/* <p className="bg-black w-full text-center text-sm font-medium text-white lg:flex-none "> */}
+
+              <p className="animate-spin-slow bg-black w-full text-center text-sm font-medium text-white lg:flex-none">
+                {/* Get free delivery on orders over $100 */}
+                קבלו משלוח חינם בהזמנות מעל 120 ש"ח{" "}
               </p>
 
-              <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+              {/* <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 <a
                   href="#"
                   className="text-sm font-medium text-white hover:text-gray-100"
@@ -335,7 +338,7 @@ function NavContainer() {
                 >
                   Sign in
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -540,7 +543,7 @@ function NavContainer() {
                   </div>
 
                   {/* Logo (lg-) */}
-                  <a href="#" className="lg:hidden">
+                  <a href="/" className="lg:hidden">
                     <span className="sr-only">Your Company</span>
                     <img
                       alt=""
