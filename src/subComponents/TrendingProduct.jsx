@@ -7,7 +7,8 @@ const products = [
     price: "$75",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-02.jpg",
+      "https://sc04.alicdn.com/kf/H3a2439283fb443ceb3d9a999619cacf59.jpg",
+    // "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-02.jpg",
     imageAlt: "Hand stitched, orange leather long wallet.",
   },
   {
@@ -17,7 +18,8 @@ const products = [
     price: "$70",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-03.jpg",
+      "https://sc04.alicdn.com/kf/H51d91ecd71f444d8944606dc96bb20f0x.jpg",
+    // "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-03.jpg",
     imageAlt: "12-sided, machined black pencil and pen.",
   },
   {
@@ -27,7 +29,8 @@ const products = [
     price: "$27",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-04.jpg",
+      "https://sc04.alicdn.com/kf/Hba8c029c26314cc0ae8cf63173f415b93.jpg",
+    // "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-04.jpg",
     imageAlt: "Set of three light and dark brown mini sketch books.",
   },
   {
@@ -37,7 +40,8 @@ const products = [
     price: "$149",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-01.jpg",
+      "https://sc04.alicdn.com/kf/H0adf49dbe6024a4ca7cecde3af3103acu.jpg",
+    // "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-trending-product-01.jpg",
     imageAlt: "Beautiful walnut organizer set with multiple white compartments",
   },
 ];

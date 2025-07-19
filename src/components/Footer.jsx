@@ -1,4 +1,5 @@
 import React from "react";
+// TODO: add contact us section + page
 const navigation = {
   solutions: [
     { name: "Marketing", href: "#" },

@@ -8,36 +8,37 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "ממה עשויות כוסות Abbraccio?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "הכוסות שלנו עשויות מקרמיקה איכותית, עמידה בפני חום, ומשלבות עיצוב מוקפד ונוחות שימוש יומיומית.",
   },
   {
-    question: "How do you make holy water?",
+    question: "האם הכוסות מתאימות לשטיפה במדיח כלים?",
     answer:
-      "You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.",
+      "בהחלט! כל הכוסות שלנו מתאימות לשטיפה במדיח ומיוצרות לעמוד בשימוש יומיומי מבלי לפגוע באיכות או בצבע.",
   },
   {
-    question: "What do you call someone with no body and no nose?",
+    question: "אפשר להשתמש בכוסות במיקרוגל?",
     answer:
-      "Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.",
+      "כן, הכוסות בטוחות לשימוש במיקרוגל ועמידות בפני חימום חוזר – מושלמות לקפה של הבוקר.",
   },
   {
-    question: "Why do you never see elephants hiding in trees?",
+    question: "האם יש הנחות למשרדים או בתי קפה?",
     answer:
-      "Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "בהחלט! אנו מציעים מחירים מיוחדים להזמנות בכמויות – לבתי קפה, משרדים וחללי עבודה. צרו קשר לקבלת הצעת מחיר מותאמת.",
   },
   {
-    question: "Why can't you hear a pterodactyl go to the bathroom?",
+    question: "איפה מיוצרות כוסות Abbraccio?",
     answer:
-      "Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.",
+      "הכוסות שלנו מעוצבות בישראל ומיוצרות תוך הקפדה על איכות הסביבה ועל תהליכי ייצור ברי קיימא.",
   },
   {
-    question: "Why did the invisible man turn down the job offer?",
+    question: "האם יש החזרות או אחריות על הכוסות?",
     answer:
-      "He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.",
+      "אנחנו מאמינים באיכות שלנו – במידה ולא תהיו מרוצים, ניתן להחזיר תוך 14 ימים ולקבל החזר מלא, בהתאם למדיניות ההחזרות שלנו.",
   },
 ];
+
 function QandA() {
   return (
     <div className="bg-white" dir="rtl">
@@ -58,7 +59,7 @@ function QandA() {
                     <span className="text-base/7 font-semibold">
                       {faq.question}
                     </span>
-                    <span className="ml-6 flex h-7 items-center">
+                    <span className=" flex h-7 items-center">
                       <PlusSmallIcon
                         aria-hidden="true"
                         className="size-6 group-data-[open]:hidden"
@@ -70,7 +71,7 @@ function QandA() {
                     </span>
                   </DisclosureButton>
                 </dt>
-                <DisclosurePanel as="dd" className="mt-2 pr-12">
+                <DisclosurePanel as="dd" className="mt-2 ">
                   <p className="text-base/7 text-gray-600">{faq.answer}</p>
                 </DisclosurePanel>
               </Disclosure>

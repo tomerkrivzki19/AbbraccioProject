@@ -318,7 +318,7 @@ function NavContainer() {
               </form>
 
               {/* <p className="bg-black w-full text-center text-sm font-medium text-white lg:flex-none "> */}
-
+              {/* TODO: add swiper */}
               <p className="animate-spin-slow bg-black w-full text-center text-sm font-medium text-white lg:flex-none">
                 {/* Get free delivery on orders over $100 */}
                 קבלו משלוח חינם בהזמנות מעל 120 ש"ח{" "}
@@ -552,7 +552,7 @@ function NavContainer() {
                     />
                   </a>
 
-                  <div className="flex flex-1 items-center justify-end">
+                  <div className="flex flex-1 items-center justify-end ">
                     <div className="flex items-center lg:ml-8">
                       <div className="flex space-x-8">
                         <div className="hidden lg:flex">
@@ -568,7 +568,7 @@ function NavContainer() {
                           </a>
                         </div>
 
-                        <div className="flex">
+                        {/* <div className="flex">
                           <a
                             href="#"
                             className="-m-2 p-2 text-gray-400 hover:text-gray-500"
@@ -576,12 +576,12 @@ function NavContainer() {
                             <span className="sr-only">Account</span>
                             <UserIcon aria-hidden="true" className="size-6" />
                           </a>
-                        </div>
+                        </div> */}
                       </div>
 
                       <span
                         aria-hidden="true"
-                        className="mx-4 h-6 w-px bg-gray-200 lg:mx-6"
+                        className="mx-4 h-6 w-px bg-trasparent lg:mx-6 "
                       />
 
                       <div className="flow-root">
