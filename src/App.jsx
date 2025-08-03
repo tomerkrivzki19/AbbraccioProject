@@ -1,6 +1,7 @@
 import reactLogo from "./assets/react.svg"; // delete this
 import viteLogo from "/vite.svg"; // delete this
 import "./App.css";
+import "./input.css";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 import NavContainer from "./components/NavContainer";

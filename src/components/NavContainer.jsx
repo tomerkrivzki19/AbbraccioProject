@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -91,9 +91,24 @@ const navigation = {
 };
 function NavContainer() {
   const [open, setOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="bg-white fixed z-40 w-full ">
+    // FIXME: fix the colurs pick
+    // FIXME: make the topics in center for sm > screens
+    <div
+      className={`fixed z-40 w-full transition duration-300 ease-in-out ${
+        hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
+      }`}
+    >
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
@@ -103,9 +118,9 @@ function NavContainer() {
         <div className="fixed inset-0 z-40 flex">
           <DialogPanel
             transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
+            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
           >
-            <div className="flex px-4 pb-2 pt-5">
+            <div className="flex px-4 pb-2 pt-5 ">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -118,7 +133,7 @@ function NavContainer() {
             </div>
 
             {/* Links */}
-            <TabGroup className="mt-2">
+            <TabGroup className="mt-2 ">
               <div className="border-b border-gray-200">
                 <TabList className="-mb-px flex space-x-8 px-4">
                   {navigation.categories.map((category) => (
@@ -135,7 +150,7 @@ function NavContainer() {
                 {navigation.categories.map((category, categoryIdx) => (
                   <TabPanel
                     key={category.name}
-                    className="space-y-12 px-4 pb-6 pt-10"
+                    className="space-y-12 px-4 pb-6 pt-10 "
                   >
                     <div className="grid grid-cols-1 items-start gap-x-6 gap-y-10">
                       <div className="grid grid-cols-1 gap-x-6 gap-y-10">
@@ -343,23 +358,28 @@ function NavContainer() {
           </div>
 
           {/* Secondary navigation */}
-          <div className="bg-white">
+          <div className="">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="border-b border-gray-200">
-                <div className="flex h-16 items-center justify-between">
+                <div className="flex h-16 items-center  w-full">
                   {/* Logo (lg+) */}
-                  <div className="hidden lg:flex lg:items-center">
+                  <div className="hidden   flex-1  lg:flex lg:items-center">
                     <a href="/">
                       <span className="sr-only">Your Company</span>
+                      {/* FIXME: FIX THE LOGO ADJUSTMENT  */}
                       <img
                         alt=""
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        className="h-8 w-auto"
+                        // src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                        // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
+                        src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                        className="h-18 w-auto max-w-[150px] object-contain"
+
+                        // className="h-8 w-auto"
                       />
                     </a>
                   </div>
 
-                  <div className="hidden h-full lg:flex">
+                  <div className="hidden   flex-1  h-full lg:flex">
                     {/* Mega menus */}
                     <PopoverGroup className="inset-x-0 bottom-0 px-4">
                       <div className="flex h-full justify-center space-x-8">
@@ -519,7 +539,7 @@ function NavContainer() {
                   </div>
 
                   {/* Mobile menu and search (lg-) */}
-                  <div className="flex flex-1 items-center lg:hidden">
+                  <div className="flex flex-1 items-center lg:hidden ">
                     <button
                       type="button"
                       onClick={() => setOpen(true)}
@@ -532,7 +552,7 @@ function NavContainer() {
                     {/* Search */}
                     <a
                       href="#"
-                      className="ml-2 p-2 text-gray-400 hover:text-gray-500"
+                      className="ml-2 p-2 pr-8 text-gray-400 hover:text-gray-500"
                     >
                       <span className="sr-only">Search</span>
                       <MagnifyingGlassIcon
@@ -547,8 +567,9 @@ function NavContainer() {
                     <span className="sr-only">Your Company</span>
                     <img
                       alt=""
-                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                      className="h-8 w-auto"
+                      // src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                      src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                      className="h-16 w-auto"
                     />
                   </a>
 

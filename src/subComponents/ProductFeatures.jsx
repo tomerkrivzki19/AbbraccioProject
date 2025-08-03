@@ -88,62 +88,168 @@
 // }
 
 // export default ProductFeatures;
+// import React from "react";
+
+// const CollectionGrid = () => {
+//   const collections = [
+//     {
+//       id: 1,
+//       title: "🏺 משפחת ספלים קרמיים",
+//       image:
+//         "https://s.alicdn.com/@sc04/kf/H4f1d345a4a2d462fb8306fff8c708398o.jpg_720x720q50.jpg",
+//       link: "/shop",
+//     },
+//     {
+//       id: 2,
+//       title: "☕ משפחת כוסות אספרסו",
+//       image:
+//         "https://s.alicdn.com/@sc04/kf/H03e84a7397544a2c9378a9d854c01578q.jpg_720x720q50.jpg",
+//       link: "/shop",
+//     },
+//     {
+//       id: 3,
+//       title: "🍵 משפחת כוסות תה / סיניות",
+//       image:
+//         "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
+//       link: "/shop",
+//     },
+//     {
+//       id: 4,
+//       title: "🧺 משפחת מארזים / סטים",
+//       image:
+//         "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
+//       link: "/shop",
+//     },
+//   ];
+
+//   return (
+//     <div className=" py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+//       {collections.map((collection) => (
+//         <a
+//           key={collection.id}
+//           href={collection.link}
+//           className="group block h-[600px] relative overflow-hidden rounded-lg shadow-md"
+//         >
+//           <img
+//             src={collection.image}
+//             alt={collection.title}
+//             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+//           />
+
+//           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex flex-col justify-center items-center text-white text-center p-4">
+//             <h2 className="text-2xl font-bold mb-4">{collection.title}</h2>
+//             <button
+//               className="relative overflow-hidden text-blue-700 font-semibold py-2 px-6 border border-blue-500 rounded cursor-pointer
+//                     before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-300
+//                     hover:before:w-full hover:text-white hover:border-transparent z-10"
+//               style={{ color: "inherit" }}
+//               type="button"
+//             >
+//               <span className="relative z-10">Shop</span>
+//             </button>
+//           </div>
+//         </a>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default CollectionGrid;
+
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const CollectionGrid = () => {
   const collections = [
     {
       id: 1,
-      title: "הדגם הראשון",
+      title: "ספלים קרמיים",
       image:
-        "https://s.alicdn.com/@sc04/kf/H4f1d345a4a2d462fb8306fff8c708398o.jpg_720x720q50.jpg",
+        // "https://s.alicdn.com/@sc04/kf/H4f1d345a4a2d462fb8306fff8c708398o.jpg_720x720q50.jpg",
+        "https://marketplace.canva.com/nvW28/MAEtMSnvW28/1/s2/canva-coffee-in-a-ceramic-mug-MAEtMSnvW28.jpg",
       link: "/shop",
     },
     {
       id: 2,
-      title: "הדגם השני",
+      title: "כוסות אספרסו",
       image:
-        "https://s.alicdn.com/@sc04/kf/H03e84a7397544a2c9378a9d854c01578q.jpg_720x720q50.jpg",
+        // "https://s.alicdn.com/@sc04/kf/H03e84a7397544a2c9378a9d854c01578q.jpg_720x720q50.jpg",
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/9659852/2.jpg?0957",
       link: "/shop",
     },
     {
       id: 3,
-      title: "הדגם השלישי",
+      title: "כוסות תה / סיניות",
       image:
-        "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
+        // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
+        "https://marketplace.canva.com/EmTnA/MAGcu4EmTnA/1/s2/canva-japanese-ceramics%3A-two-handmade-tea-cups-MAGcu4EmTnA.jpg",
+      link: "/shop",
+    },
+    {
+      id: 4,
+      title: "מארזים / סטים",
+      image:
+        // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
+        "https://shop-chopsticks.com/cdn/shop/files/S35b8e18fedad496eb001d9e9c0b6cbd5y_800x.webp?v=1729103757",
       link: "/shop",
     },
   ];
 
   return (
-    <div className=" py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-      {collections.map((collection) => (
-        <a
-          key={collection.id}
-          href={collection.link}
-          className="group block h-[600px] relative overflow-hidden rounded-lg shadow-md"
-        >
-          <img
-            src={collection.image}
-            alt={collection.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-
-          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex flex-col justify-center items-center text-white text-center p-4">
-            <h2 className="text-2xl font-bold mb-4">{collection.title}</h2>
-            <button
-              className="relative overflow-hidden text-blue-700 font-semibold py-2 px-6 border border-blue-500 rounded cursor-pointer
-                    before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-300
-                    hover:before:w-full hover:text-white hover:border-transparent z-10"
-              style={{ color: "inherit" }}
-              type="button"
-            >
-              <span className="relative z-10">Shop</span>
-            </button>
-          </div>
-        </a>
-      ))}
-    </div>
+    <section
+      className="shopify-section section-editorial-cards py-10 px-1 sm:px-4"
+      dir="ltr"
+    >
+      <div className="section section-blends section-full">
+        <div className="section-stack">
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1.2}
+            breakpoints={{
+              640: { slidesPerView: 2.2 },
+              1000: { slidesPerView: 4 },
+            }}
+            className="scroll-cards"
+          >
+            {collections.map((collection) => (
+              <SwiperSlide key={collection.id}>
+                <a
+                  href={collection.link}
+                  className="scroll-card under-image"
+                  style={{
+                    "--card-title-font": "Helvetica, sans-serif",
+                    "--card-subtitle-font": "sans-serif",
+                    "--card-title-size": "18px",
+                    "--card-subtitle-size": "16px",
+                    "--card-title-color": "26 26 26",
+                    "--card-subtitle-color": "0 0 0",
+                    "--card-text-align": "center",
+                    "--card-overlay-color": "rgba(0, 0, 0, 0.1)",
+                    "--overlay-text-vertical": "flex-end",
+                  }}
+                >
+                  <img
+                    src={collection.image}
+                    alt={collection.title}
+                    className="card-image"
+                    style={{
+                      aspectRatio: "3 / 4",
+                      height: "auto",
+                      maxHeight: "500px",
+                    }}
+                  />
+                  <div className="scroll-card-content">
+                    <p className="card-title text-center">{collection.title}</p>
+                    <p className="card-subtitle"></p>
+                  </div>
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
   );
 };
 

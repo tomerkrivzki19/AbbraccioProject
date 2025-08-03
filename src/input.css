@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* FIXME: try to connect the config fille to this taiilwind v4 version or swtich to v3 version to make config options  */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --primary: 24 9% 15%;
+  --secondary: 240 5% 96%;
+  /* ... */
+}
+
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  /* ... */
+}

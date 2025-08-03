@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  direction: rtl;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
