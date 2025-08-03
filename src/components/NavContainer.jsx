@@ -27,7 +27,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const navigation = {
   categories: [
     {
-      name: "/",
+      name: "חנות",
       featured: [
         { name: "Sleep", href: "#" },
         { name: "Swimwear", href: "#" },
@@ -54,39 +54,41 @@ const navigation = {
         { name: "Significant Other", href: "#" },
       ],
     },
-    {
-      name: "/",
-      featured: [
-        { name: "Casual", href: "#" },
-        { name: "Boxers", href: "#" },
-        { name: "Outdoor", href: "#" },
-      ],
-      collection: [
-        { name: "Everything", href: "#" },
-        { name: "Core", href: "#" },
-        { name: "New Arrivals", href: "#" },
-        { name: "Sale", href: "#" },
-      ],
-      categories: [
-        { name: "Artwork Tees", href: "#" },
-        { name: "Pants", href: "#" },
-        { name: "Accessories", href: "#" },
-        { name: "Boxers", href: "#" },
-        { name: "Basic Tees", href: "#" },
-      ],
-      brands: [
-        { name: "Significant Other", href: "#" },
-        { name: "My Way", href: "#" },
-        { name: "Counterfeit", href: "#" },
-        { name: "Re-Arranged", href: "#" },
-        { name: "Full Nelson", href: "#" },
-      ],
-    },
+    // {
+    //   name: "/",
+    //   featured: [
+    //     { name: "Casual", href: "#" },
+    //     { name: "Boxers", href: "#" },
+    //     { name: "Outdoor", href: "#" },
+    //   ],
+    //   collection: [
+    //     { name: "Everything", href: "#" },
+    //     { name: "Core", href: "#" },
+    //     { name: "New Arrivals", href: "#" },
+    //     { name: "Sale", href: "#" },
+    //   ],
+    //   categories: [
+    //     { name: "Artwork Tees", href: "#" },
+    //     { name: "Pants", href: "#" },
+    //     { name: "Accessories", href: "#" },
+    //     { name: "Boxers", href: "#" },
+    //     { name: "Basic Tees", href: "#" },
+    //   ],
+    //   brands: [
+    //     { name: "Significant Other", href: "#" },
+    //     { name: "My Way", href: "#" },
+    //     { name: "Counterfeit", href: "#" },
+    //     { name: "Re-Arranged", href: "#" },
+    //     { name: "Full Nelson", href: "#" },
+    //   ],
+    // },
   ],
   pages: [
-    { name: "delivery-policy", href: "/delivery-policy" },
-    { name: "takanon", href: "/takanon" },
-    { name: "Stores", href: "/shop" },
+    { name: "משלוחים", href: "/delivery-policy" },
+    { name: "מבצעי החודש", href: "/shop" },
+    { name: "קולקציית החג", href: "/shop" },
+    { name: "מארז אביזרי קפה ", href: "/shop" },
+    { name: "תקנון האתר ", href: "/takanon" },
   ],
 };
 function NavContainer() {
@@ -382,11 +384,12 @@ function NavContainer() {
                   <div className="hidden   flex-1  h-full lg:flex">
                     {/* Mega menus */}
                     <PopoverGroup className="inset-x-0 bottom-0 px-4">
-                      <div className="flex h-full justify-center space-x-8">
+                      <div className="flex h-full justify-center space-x-2 items-center justify-evenly">
                         {navigation.categories.map((category, categoryIdx) => (
                           <Popover key={category.name} className="flex">
                             <div className="relative flex">
-                              <PopoverButton className="group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-indigo-600">
+                              {/* FIXME: The store btn padding */}
+                              <PopoverButton className="pl-5 group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-indigo-600">
                                 {category.name}
                                 <span
                                   aria-hidden="true"
@@ -529,7 +532,9 @@ function NavContainer() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                            // FIXME: the width of the topics in big sizes screens
+                            // className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 text-center center bg-red-100"
+                            className="flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 h-10 text-center "
                           >
                             {page.name}
                           </a>

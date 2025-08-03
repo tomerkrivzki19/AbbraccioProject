@@ -4,7 +4,9 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
+import "swiper/css/pagination";
+
+import { Autoplay, Pagination } from "swiper/modules";
 
 function Hero() {
   // return (
@@ -104,9 +106,10 @@ function Hero() {
       {/* Swiper Background Layer */}
       <div className="absolute inset-0 z-0">
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop
+          pagination={{ clickable: true }}
           className="w-full h-full"
         >
           <SwiperSlide>

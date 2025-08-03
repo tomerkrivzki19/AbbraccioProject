@@ -317,7 +317,10 @@ function TrendingProduct() {
                 </div>
 
                 <div className="pt-0">
-                  <button className="w-full py-2 px-4 bg-coffee-primary hover:bg-coffee-rich text-coffee-cream rounded-lg font-semibold">
+                  <button
+                    // className="w-full py-2 px-4 bg-coffee-primary hover:bg-coffee-rich text-coffee-cream rounded-lg font-semibold"
+                    className=" w-full py-2 px-4  rounded-lg font-semibold  text-black border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition"
+                  >
                     הוסף לעגלה
                   </button>
                 </div>
@@ -329,7 +332,7 @@ function TrendingProduct() {
         <div className="text-center mt-8">
           <button
             // className="border text-coffee-primary border-coffee-primary hover:bg-coffee-primary hover:text-coffee-cream px-6 py-2 rounded-lg font-medium text-lg"
-            className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"
+            className="text-black border border-black px-5 py-2 text-sm hover:bg-black hover:text-white transition"
           >
             צפו בכל המוצרים
           </button>
