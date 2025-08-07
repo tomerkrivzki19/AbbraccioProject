@@ -126,7 +126,7 @@ function Hero() {
           <SwiperSlide>
             <img
               // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-              src="https://marketplace.canva.com/EAE1yxwwWs0/1/0/900w/canva-S6rIzknHLxY.jpg"
+              src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
               className="w-full h-full object-cover"
               alt="bg2"
             />

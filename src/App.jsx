@@ -12,6 +12,7 @@ import Taknon from "./components/Taknon";
 import Negishot from "./components/Negishot";
 import DeliveryPolicy from "./components/DeliveryPolicy";
 import ErrorPage from "./components/ErrorPage";
+import ProductPage from "./components/ProductPage";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
           <Route path="/" element={<MainPage />} />
           <Route path="/shop" element={<StorePage />} />
+          {/* TODO: add a url params ?.... */}
+          <Route path="/productPage" element={<ProductPage />} />
           <Route path="/takanon" element={<Taknon />} />
           <Route path="/negishot" element={<Negishot />} />
           <Route path="/delivery-policy" element={<DeliveryPolicy />} />
