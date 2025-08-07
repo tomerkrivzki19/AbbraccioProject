@@ -1,29 +1,95 @@
 import React from "react";
 // TODO: add contact us section + page
 const navigation = {
+  // קישורים מהירים
   solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Automation", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+    { name: "בית", href: "#" },
+    { name: "מוצרים", href: "#" },
+    { name: "קטגוריות", href: "#" },
+    { name: "אודותינו", href: "#" },
+    { name: "משלוחים והחזרות", href: "#" },
   ],
+  // שירות לקוחות
   support: [
-    { name: "Submit ticket", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
+    { name: "שאלות נפוצות", href: "#" },
+    { name: "מדיניות החזרות", href: "#" },
+    { name: "תנאי שימוש", href: "#" },
+    { name: "מדיניות פרטיות", href: "#" },
+    { name: "צור קשר", href: "#" },
   ],
+  // יצירת קשר
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
+    {
+      name: "03-1234567  ",
+      icon: (props) => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+          />
+        </svg>
+      ),
+      // href: "#",
+    },
+    {
+      name: "info@abbraccio.co.il",
+      icon: (props) => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          />
+        </svg>
+      ),
+      // href: "#",
+    },
+    {
+      name: "תל אביב, ישראל",
+      icon: (props) => (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+          />
+        </svg>
+      ),
+      // href: "#",
+    },
   ],
-  legal: [
-    { name: "Terms of service", href: "#" },
-    { name: "Privacy policy", href: "#" },
-    { name: "License", href: "#" },
-  ],
+  // legal: [
+  //   { name: "Terms of service", href: "#" },
+  //   { name: "Privacy policy", href: "#" },
+  //   { name: "License", href: "#" },
+  // ],
   social: [
     {
       name: "Facebook",
@@ -90,26 +156,160 @@ const navigation = {
 };
 function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    // <footer className="bg-[#351C10]">
+    //   <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    //     <div className="xl:grid xl:grid-cols-3 xl:gap-8 ">
+    //       <div className="space-y-8">
+    //         <img
+    //           alt="Company name"
+    //           // src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+    //           src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+    //           // className="h-9"
+    //           className="h-18 w-auto max-w-[150px] object-contain"
+    //         />
+
+    //         <p className="text-balance text-sm/6 text-gray-600">
+    //           {/* Making the world a better place through constructing elegant
+    //           hierarchies. */}
+    //           יוצרים אביזרי קפה קרמיים איכותיים בעבודת יד לחובבי הקפה הישראלים
+    //         </p>
+    //         <div className="flex gap-x-6">
+    //           {navigation.social.map((item) => (
+    //             <a
+    //               key={item.name}
+    //               href={item.href}
+    //               className="text-gray-600 hover:text-gray-800"
+    //             >
+    //               <span className="sr-only">{item.name}</span>
+    //               <item.icon aria-hidden="true" className="size-6" />
+    //             </a>
+    //           ))}
+    //         </div>
+    //       </div>
+    //       {/* checking  */}
+    //       <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
+    //         {/* First Column */}
+    //         <div>
+    //           <h3 className="text-sm/6 font-semibold text-gray-900">
+    //             קישורים מהירים
+    //           </h3>
+    //           <ul role="list" className="mt-6 space-y-4">
+    //             {navigation.solutions.map((item) => (
+    //               <li key={item.name}>
+    //                 <a
+    //                   href={item.href}
+    //                   className="text-sm/6 text-gray-600 hover:text-gray-900"
+    //                 >
+    //                   {item.name}
+    //                 </a>
+    //               </li>
+    //             ))}
+    //           </ul>
+    //         </div>
+
+    //         {/* Second Column */}
+    //         <div>
+    //           <h3 className="text-sm/6 font-semibold text-gray-900">
+    //             שירות לקוחות
+    //           </h3>
+    //           <ul role="list" className="mt-6 space-y-4">
+    //             {navigation.support.map((item) => (
+    //               <li key={item.name}>
+    //                 <a
+    //                   href={item.href}
+    //                   className="text-sm/6 text-gray-600 hover:text-gray-900"
+    //                 >
+    //                   {item.name}
+    //                 </a>
+    //               </li>
+    //             ))}
+    //           </ul>
+    //         </div>
+
+    //         {/* Third Column – with pink background */}
+    //         <div className="md:col-span-1 sm:col-span-full w-full">
+    //           <h3 className="text-sm/6 font-semibold text-gray-900">
+    //             יצירת קשר
+    //           </h3>
+    //           <ul role="list" className="mt-6 space-y-4">
+    //             {navigation.company.map((item) => (
+    //               <div className="flex space-x-2" key={item.name}>
+    //                 <span className="text-gray-600 hover:text-gray-800">
+    //                   <item.icon aria-hidden="true" />
+    //                 </span>
+    //                 <li>
+    //                   <a
+    //                     href={item.href}
+    //                     className="text-sm/6 text-gray-600 hover:text-gray-900"
+    //                   >
+    //                     {item.name}
+    //                   </a>
+    //                 </li>
+    //               </div>
+    //             ))}
+    //           </ul>
+
+    //           {/* Pink Newsletter Box */}
+    //           <div className="mt-8 p-4 w-full">
+    //             <h3 className="text-sm/6 font-semibold text-gray-900">
+    //               עדכונים וחדשות
+    //             </h3>
+    //             <form className="mt-4 sm:flex sm:max-w-md">
+    //               <label htmlFor="email-address" className="sr-only">
+    //                 Email address
+    //               </label>
+    //               <input
+    //                 id="email-address"
+    //                 name="email-address"
+    //                 type="email"
+    //                 required
+    //                 placeholder="הכניסו את כתובת המייל"
+    //                 autoComplete="email"
+    //                 className="w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus-visible:outline-indigo-600 sm:w-56 sm:text-sm/6"
+    //               />
+    //               <div className="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
+    //                 <button
+    //                   type="submit"
+    //                   className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    //                 >
+    //                   הרשמה
+    //                 </button>
+    //               </div>
+    //             </form>
+    //           </div>
+    //         </div>
+    //       </div>
+
+    //       {/* cheking */}
+    //     </div>
+    //     <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+    //       <p className="text-sm/6 text-gray-600 text-center">
+    //         {/* &copy; 2024 Your Company, Inc. All rights reserved. */}
+    //         &copy; 2024 AbbraCCio. כל הזכויות שמורות.
+    //       </p>
+    //     </div>
+    //   </div>
+    // </footer>
+    <footer className="bg-[#351C10]">
+      {/* <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32"> */}
+      <div className="mx-auto  px-4 pb-8 pt-16 sm:pt-24 lg:px-6 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img
               alt="Company name"
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-9"
+              // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+              src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
+              className="h-18 w-auto max-w-[150px] object-contain"
             />
-
-            <p className="text-balance text-sm/6 text-gray-600">
-              Making the world a better place through constructing elegant
-              hierarchies.
+            <p className="text-balance text-sm/6 text-gray-400">
+              יוצרים אביזרי קפה קרמיים איכותיים בעבודת יד לחובבי הקפה הישראלים
             </p>
             <div className="flex gap-x-6">
               {navigation.social.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="size-6" />
@@ -117,82 +317,163 @@ function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Support
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 xl:col-span-2 xl:mt-0">
+            {/* First Column */}
+            <div>
+              <h3 className="text-sm/6 font-semibold text-white">
+                קישורים מהירים
+              </h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.solutions.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className="text-sm/6 text-gray-400 hover:text-white transition"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm/6 font-semibold text-gray-900">
-                  Company
+
+            {/* Second Column */}
+            <div>
+              <h3 className="text-sm/6 font-semibold text-white">
+                שירות לקוחות
+              </h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.support.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className="text-sm/6 text-gray-400 hover:text-white transition"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Third Column */}
+            <div className="md:col-span-1 sm:col-span-full w-full">
+              <h3 className="text-sm/6 font-semibold text-white">יצירת קשר</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.company.map((item) => (
+                  <div className="flex space-x-2 items-center" key={item.name}>
+                    <span className="text-gray-400 hover:text-white transition">
+                      <item.icon aria-hidden="true" />
+                    </span>
+                    <li>
+                      <a
+                        href={item.href}
+                        className="text-sm/6 text-gray-400 hover:text-white transition"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  </div>
+                ))}
+              </ul>
+
+              {/* Newsletter */}
+              {/* <div className="mt-8 p-4 w-full bg-[#47291a] rounded-md">
+                <h3 className="text-sm/6 font-semibold text-white">
+                  עדכונים וחדשות
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-gray-900">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm/6 text-gray-600 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <form className="mt-4 sm:flex sm:max-w-md">
+                  <label htmlFor="email-address" className="sr-only">
+                    Email address
+                  </label>
+                  <input
+                    id="email-address"
+                    name="email-address"
+                    type="email"
+                    required
+                    placeholder="הכניסו את כתובת המייל"
+                    autoComplete="email"
+                    className="w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus-visible:outline-indigo-600 sm:w-56 sm:text-sm/6"
+                  />
+                  <div className="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
+                    <button
+                      type="submit"
+                      // className="flex w-full items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="flex w-full items-center justify-center rounded-md bg-[#fce8cd] px-3 py-2 text-sm font-semibold text-[#351C10] shadow hover:bg-[#f7dbb6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fce8cd]"
+                    >
+                      הרשמה
+                    </button>
+                  </div>
+                </form>
+              </div> */}
+
+              {/* <div className="mt-8 w-full rounded-md bg-[#47291a] px-4 py-6 sm:px-6">
+                <h3 className="text-sm/6 font-semibold text-white">
+                  עדכונים וחדשות
+                </h3>
+
+                <form className="mt-4 flex w-full flex-col sm:flex-row sm:items-center sm:gap-4">
+                  <label htmlFor="email-address" className="sr-only">
+                    Email address
+                  </label>
+
+                  <input
+                    id="email-address"
+                    name="email-address"
+                    type="email"
+                    required
+                    placeholder="הכניסו את כתובת המייל"
+                    autoComplete="email"
+                    className="w-full sm:max-w-xs rounded-md bg-white px-3 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus-visible:outline-indigo-600 sm:text-sm/6"
+                  />
+
+                  <button
+                    type="submit"
+                    className="mt-4 sm:mt-0 sm:w-auto w-full flex items-center justify-center rounded-md bg-[#fce8cd] px-4 py-2 text-sm font-semibold text-[#351C10] shadow hover:bg-[#f7dbb6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fce8cd] transition-colors duration-200"
+                  >
+                    הרשמה
+                  </button>
+                </form>
+              </div> */}
+
+              <div className="mt-8 w-full rounded-md bg-[#47291a] px-4 py-6 sm:px-6">
+                <h3 className="text-sm font-semibold text-white">
+                  עדכונים וחדשות
+                </h3>
+
+                <form className="mt-4 flex w-full flex-col sm:flex-row sm:items-center sm:gap-4">
+                  <label htmlFor="email-address" className="sr-only">
+                    Email address
+                  </label>
+
+                  <input
+                    id="email-address"
+                    name="email-address"
+                    type="email"
+                    required
+                    placeholder="הכניסו את כתובת המייל"
+                    autoComplete="email"
+                    // className="min-w-0 flex-1 rounded-md bg-white px-3 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-500 focus:outline-2 focus-visible:outline-indigo-600 sm:text-sm"
+                    className="min-w-0 flex-1 rounded-md bg-white px-3 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-500 placeholder:text-sm focus:outline-2 focus-visible:outline-indigo-600 sm:text-sm"
+                  />
+
+                  <button
+                    type="submit"
+                    className="mt-4 sm:mt-0 sm:w-auto w-full flex-shrink-0 flex items-center justify-center rounded-md bg-[#fce8cd] px-4 py-2 text-sm font-semibold text-[#351C10] shadow hover:bg-[#f7dbb6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fce8cd] transition-colors duration-200"
+                  >
+                    הרשמה
+                  </button>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-sm/6 text-gray-600">
-            &copy; 2024 Your Company, Inc. All rights reserved.
+
+        {/* Footer bottom */}
+        <div className="mt-16 border-t border-gray-700 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-sm/6 text-gray-400 text-center">
+            &copy; 2024 AbbraCCio. כל הזכויות שמורות.
           </p>
         </div>
       </div>

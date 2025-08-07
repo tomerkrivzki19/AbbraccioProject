@@ -161,6 +161,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const CollectionGrid = () => {
+  // FIXME: rejects - the images insdie the coursella need to be fitted inside the bg of the site
   const collections = [
     {
       id: 1,

@@ -239,6 +239,7 @@ function TrendingProduct() {
   //     </div>
   //   </div>
   // );
+  // FIXME:
   return (
     <section id="products" className="py-16 coffee-gradient bg-stone-100">
       <div className="container px-4">
@@ -265,15 +266,15 @@ function TrendingProduct() {
                         חדש
                       </span>
                     )}
+                  </div>
+                  {/* <Heart className="h-4 w-4" /> */}
+                  <button className="p-2 text-coffee-primary hover:text-coffee-rich">
+                    {/* <HeartIcon className="h-4 w-4" /> */}
                     {product.isSale && (
                       <span className="text-xs font-semibold px-2 py-1 bg-destructive text-white rounded">
                         מבצע
                       </span>
                     )}
-                  </div>
-                  <button className="p-2 text-coffee-primary hover:text-coffee-rich">
-                    {/* <Heart className="h-4 w-4" /> */}
-                    <HeartIcon className="h-4 w-4" />
                   </button>
                 </div>
 

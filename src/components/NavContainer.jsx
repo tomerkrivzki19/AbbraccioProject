@@ -307,10 +307,10 @@ function NavContainer() {
         </div>
       </Dialog>
 
-      <header className="relative">
+      <header className="relative ">
         <nav aria-label="Top">
           {/* Top navigation */}
-          <div className="bg-gray-900">
+          <div className="bg-[#351C10]  ">
             <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               {/* Currency selector */}
               <form className="hidden lg:block lg:flex-1">
@@ -336,7 +336,7 @@ function NavContainer() {
 
               {/* <p className="bg-black w-full text-center text-sm font-medium text-white lg:flex-none "> */}
               {/* TODO: add swiper */}
-              <p className="animate-spin-slow bg-black w-full text-center text-sm font-medium text-white lg:flex-none">
+              <p className="animate-spin-slow  w-full text-center text-sm font-medium text-white lg:flex-none">
                 {/* Get free delivery on orders over $100 */}
                 קבלו משלוח חינם בהזמנות מעל 120 ש"ח{" "}
               </p>

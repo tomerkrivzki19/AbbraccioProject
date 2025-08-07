@@ -107,21 +107,26 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <Swiper
           modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 8000, disableOnInteraction: false }}
           loop
           pagination={{ clickable: true }}
           className="w-full h-full"
         >
           <SwiperSlide>
-            <img
-              src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-              className="w-full h-full object-cover"
-              alt="bg1"
-            />
+            <a href="/shop">
+              <img
+                // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
+                src="https://ik.imagekit.io/etcjxhfhp/56d86d16-1701-4495-8a92-e54a60c3afc1.jpg?updatedAt=1754512513542"
+                // src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
+                className="w-full h-full object-cover"
+                alt="bg1"
+              />
+            </a>
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
+              // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
+              src="https://marketplace.canva.com/EAE1yxwwWs0/1/0/900w/canva-S6rIzknHLxY.jpg"
               className="w-full h-full object-cover"
               alt="bg2"
             />
@@ -138,7 +143,7 @@ function Hero() {
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 flex items-center justify-center min-h-[100vh]">
+      {/* <div className="relative z-10 flex items-center justify-center min-h-[100vh]">
         <div className="container px-4 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
@@ -173,10 +178,10 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Optional bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/50 to-transparent z-10" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/50 to-transparent z-10" /> */}
     </section>
   );
 }
