@@ -41,7 +41,7 @@ const products = [
   },
 ];
 
-function ShoppingCartDrawer({ open, setOpen, isCartOpen, setIsCartOpen }) {
+function ShoppingCartDrawer({ isCartOpen, setIsCartOpen }) {
   //   const [open, setOpen] = useState(true);
 
   return (

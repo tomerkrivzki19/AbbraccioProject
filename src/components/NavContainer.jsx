@@ -23,6 +23,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import ShoppingCartDrawer from "../subComponents/ShoppingCartDrawer";
+import CommanPatterns from "../subComponents/CommanPatterns";
 
 // const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
 const navigation = {
@@ -94,9 +95,8 @@ const navigation = {
 };
 function NavContainer() {
   const [open, setOpen] = useState(false);
-  const [openCart, setOpenCart] = useState(true);
-  // option 2
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isCommandPatternsOpen, setIsCommandPatternsOpen] = useState(false);
 
   const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -559,8 +559,8 @@ function NavContainer() {
                       <Bars3Icon aria-hidden="true" className="size-6" />
                     </button>
 
-                    {/* Search */}
-                    <a
+                    {/* Search  - small sizes */}
+                    {/* <a
                       href="#"
                       className="ml-2 p-2 pr-8 text-gray-400 hover:text-gray-500"
                     >
@@ -569,7 +569,8 @@ function NavContainer() {
                         aria-hidden="true"
                         className="size-6"
                       />
-                    </a>
+                      ss
+                    </a> */}
                   </div>
 
                   {/* Logo (lg-) */}
@@ -587,8 +588,9 @@ function NavContainer() {
                     <div className="flex items-center lg:ml-8">
                       <div className="flex space-x-8">
                         <div className="hidden lg:flex">
-                          <a
-                            href="#"
+                          <button
+                            // href="#"
+                            onClick={() => setIsCommandPatternsOpen(true)}
                             className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                           >
                             <span className="sr-only">Search</span>
@@ -596,7 +598,7 @@ function NavContainer() {
                               aria-hidden="true"
                               className="size-6"
                             />
-                          </a>
+                          </button>
                         </div>
 
                         {/* <div className="flex">
@@ -610,11 +612,26 @@ function NavContainer() {
                         </div> */}
                       </div>
 
+                      {/* NOTES FIXME: isCommandPatternsOpen, setIsCommandPatternsOpen */}
+                      {/* Search  - small sizes */}
+                      <button
+                        onClick={() => setIsCommandPatternsOpen(true)}
+                        className=" p-2  text-gray-400 hover:text-gray-500  block lg:hidden "
+                      >
+                        <span className="sr-only">Search</span>
+                        <MagnifyingGlassIcon
+                          aria-hidden="true"
+                          className="size-6"
+                        />
+                      </button>
                       <span
                         aria-hidden="true"
                         className="mx-4 h-6 w-px bg-trasparent lg:mx-6 "
                       />
-
+                      <CommanPatterns
+                        isCommandPatternsOpen={isCommandPatternsOpen}
+                        setIsCommandPatternsOpen={setIsCommandPatternsOpen}
+                      />
                       <div className="flow-root">
                         {/* FIXME: the cart btn */}
                         {/* <button
@@ -623,6 +640,7 @@ function NavContainer() {
       >
         Open dialog
       </button> */}
+
                         <button
                           // onClick={() => setOpenCart(true)}
                           onClick={() => setIsCartOpen(true)}
@@ -639,9 +657,8 @@ function NavContainer() {
                             items in cart, view bag
                           </span>
                         </button>
+
                         <ShoppingCartDrawer
-                          open={openCart}
-                          setOpen={setOpenCart}
                           setIsCartOpen={setIsCartOpen}
                           isCartOpen={isCartOpen}
                         />
