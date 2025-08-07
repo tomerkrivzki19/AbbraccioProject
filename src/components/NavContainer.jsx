@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -22,6 +22,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import ShoppingCartDrawer from "../subComponents/ShoppingCartDrawer";
 
 // const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
 const navigation = {
@@ -93,6 +94,10 @@ const navigation = {
 };
 function NavContainer() {
   const [open, setOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(true);
+  // option 2
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -611,8 +616,16 @@ function NavContainer() {
                       />
 
                       <div className="flow-root">
-                        <a
-                          href="#"
+                        {/* FIXME: the cart btn */}
+                        {/* <button
+        onClick={() => setOpen(true)}
+        className="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10"
+      >
+        Open dialog
+      </button> */}
+                        <button
+                          // onClick={() => setOpenCart(true)}
+                          onClick={() => setIsCartOpen(true)}
                           className="group -m-2 flex items-center p-2"
                         >
                           <ShoppingCartIcon
@@ -625,7 +638,13 @@ function NavContainer() {
                           <span className="sr-only">
                             items in cart, view bag
                           </span>
-                        </a>
+                        </button>
+                        <ShoppingCartDrawer
+                          open={openCart}
+                          setOpen={setOpenCart}
+                          setIsCartOpen={setIsCartOpen}
+                          isCartOpen={isCartOpen}
+                        />
                       </div>
                     </div>
                   </div>
