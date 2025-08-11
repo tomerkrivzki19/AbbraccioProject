@@ -115,9 +115,8 @@ function Hero() {
           <SwiperSlide>
             <a href="/shop">
               <img
-                // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-                src="https://ik.imagekit.io/etcjxhfhp/56d86d16-1701-4495-8a92-e54a60c3afc1.jpg?updatedAt=1754512513542"
-                // src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
+                src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
+                // src="https://ik.imagekit.io/etcjxhfhp/56d86d16-1701-4495-8a92-e54a60c3afc1.jpg?updatedAt=1754512513542"
                 className="w-full h-full object-cover"
                 alt="bg1"
               />

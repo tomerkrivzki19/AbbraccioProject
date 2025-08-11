@@ -141,11 +141,12 @@ function NavContainer() {
             {/* Links */}
             <TabGroup className="mt-2 ">
               <div className="border-b border-gray-200">
-                <TabList className="-mb-px flex space-x-8 px-4">
+                <TabList className="-mb-px flex space-x-8 px-4 ">
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
-                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
+                      // className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
+                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-[#351C10] data-[selected]:text-[#351C10] "
                     >
                       {category.name}
                     </Tab>
@@ -165,7 +166,7 @@ function NavContainer() {
                             id={`mobile-featured-heading-${categoryIdx}`}
                             className="font-medium text-gray-900"
                           >
-                            Featured
+                            מומלצים
                           </p>
                           <ul
                             role="list"
@@ -186,7 +187,7 @@ function NavContainer() {
                             id="mobile-categories-heading"
                             className="font-medium text-gray-900"
                           >
-                            Categories
+                            קטגוריות
                           </p>
                           <ul
                             role="list"
@@ -209,7 +210,7 @@ function NavContainer() {
                             id="mobile-collection-heading"
                             className="font-medium text-gray-900"
                           >
-                            Collection
+                            קולקציה
                           </p>
                           <ul
                             role="list"
@@ -231,7 +232,7 @@ function NavContainer() {
                             id="mobile-brand-heading"
                             className="font-medium text-gray-900"
                           >
-                            Brands
+                            מותגים
                           </p>
                           <ul
                             role="list"
@@ -393,11 +394,11 @@ function NavContainer() {
                           <Popover key={category.name} className="flex">
                             <div className="relative flex">
                               {/* FIXME: The store btn padding */}
-                              <PopoverButton className="pl-5 group relative flex items-center justify-center text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-indigo-600">
+                              <PopoverButton className="p-3 group relative flex items-center justify-center   text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-[#351C10]">
                                 {category.name}
                                 <span
                                   aria-hidden="true"
-                                  className="absolute inset-x-0 -bottom-px z-30 h-0.5 transition duration-200 ease-out group-data-[open]:bg-indigo-600"
+                                  className="absolute inset-x-0 -bottom-px z-30 h-0.5 transition duration-200 ease-out group-data-[open]:bg-[#351C10]"
                                 />
                               </PopoverButton>
                             </div>
@@ -419,7 +420,7 @@ function NavContainer() {
                                           id={`desktop-featured-heading-${categoryIdx}`}
                                           className="font-medium text-gray-900"
                                         >
-                                          Featured
+                                          מומלצים
                                         </p>
                                         <ul
                                           role="list"
@@ -446,7 +447,7 @@ function NavContainer() {
                                           id="desktop-categories-heading"
                                           className="font-medium text-gray-900"
                                         >
-                                          Categories
+                                          קטגוריות
                                         </p>
                                         <ul
                                           role="list"
@@ -475,7 +476,7 @@ function NavContainer() {
                                           id="desktop-collection-heading"
                                           className="font-medium text-gray-900"
                                         >
-                                          Collection
+                                          קולקציה
                                         </p>
                                         <ul
                                           role="list"
@@ -503,7 +504,7 @@ function NavContainer() {
                                           id="desktop-brand-heading"
                                           className="font-medium text-gray-900"
                                         >
-                                          Brands
+                                          מותגים
                                         </p>
                                         <ul
                                           role="list"

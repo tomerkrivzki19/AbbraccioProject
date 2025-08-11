@@ -295,10 +295,12 @@ function Footer() {
       <div className="mx-auto  px-4 pb-8 pt-16 sm:pt-24 lg:px-6 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
+            {/* FIXME: logo img with the desinger options*/}
             <img
               alt="Company name"
               // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
-              src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
+              // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
+              src="https://ik.imagekit.io/etcjxhfhp/21f16450-6e66-4c74-a96f-c728dfc86960.jpg?updatedAt=1754884421983"
               className="h-18 w-auto max-w-[150px] object-contain"
             />
             <p className="text-balance text-sm/6 text-gray-400">

@@ -394,6 +394,123 @@ function TrendingProduct() {
   //   </section>
   // );
   return (
+    // <>
+    // <section id="products" className="py-16 bg-[#fefbf7]">
+    //   <div className="max-w-7xl mx-auto px-4">
+    //     <div className="text-center mb-12">
+    //       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#4B2E23]">
+    //         המוצרים המובילים שלנו
+    //       </h2>
+    //       <p className="text-lg text-[#4B2E23]/80 max-w-2xl mx-auto">
+    //         מוצרים נבחרים שזוכים לאהדה מיוחדת מלקוחותינו
+    //       </p>
+    //     </div>
+
+    //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    //       {products.map((product) => (
+    //         <Link key={product.id} to={`/product/${product.id}`}>
+    //           <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group border border-[#e5d5c6] cursor-pointer">
+    //             <div className="p-6">
+    //               {/* Badges & Heart */}
+    //               <div className="flex justify-between items-start mb-4">
+    //                 <div className="flex flex-col gap-2">
+    //                   {product.isNew && (
+    //                     <span className="inline-block text-sm px-3 py-1 rounded-full bg-[#4B2E23] text-[#fefbf7]">
+    //                       חדש
+    //                     </span>
+    //                   )}
+    //                   {product.isSale && (
+    //                     <span className="inline-block text-sm px-3 py-1 rounded-full bg-red-100 text-red-600">
+    //                       מבצע
+    //                     </span>
+    //                   )}
+    //                 </div>
+    //                 <button className="p-2 text-gray-600 hover:text-red-400 transition">
+    //                   {/* Heart Icon */}
+    //                   <svg
+    //                     className="h-4 w-4"
+    //                     fill="none"
+    //                     stroke="currentColor"
+    //                     strokeWidth="2"
+    //                     viewBox="0 0 24 24"
+    //                   >
+    //                     <path
+    //                       strokeLinecap="round"
+    //                       strokeLinejoin="round"
+    //                       d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5
+    //                       4.5 0 116.364 6.364L12 20.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+    //                     />
+    //                   </svg>
+    //                 </button>
+    //               </div>
+
+    //               {/* Product Image */}
+    //               <div className="mb-4 overflow-hidden rounded-lg">
+    //                 <img
+    //                   src={product.image}
+    //                   alt={product.name}
+    //                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+    //                 />
+    //               </div>
+
+    //               {/* Product Info */}
+    //               <h3 className="font-semibold text-lg mb-2 text-[#4B2E23] line-clamp-2">
+    //                 {product.name}
+    //               </h3>
+    //               <p className="text-sm text-gray-500 mb-3 line-clamp-2">
+    //                 {product.description}
+    //               </p>
+
+    //               {/* Rating */}
+    //               <div className="flex items-center gap-2 mb-3">
+    //                 <div className="flex items-center text-yellow-500">
+    //                   <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+    //                     <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.87 1.4-8.168-5.934-5.787 8.2-1.193z" />
+    //                   </svg>
+    //                   <span className="text-sm font-medium ml-1">
+    //                     {product.rating}
+    //                   </span>
+    //                 </div>
+    //                 <span className="text-sm text-gray-500">
+    //                   ({product.reviews} ביקורות)
+    //                 </span>
+    //               </div>
+
+    //               {/* Price */}
+    //               <div className="flex items-center gap-2 mb-4">
+    //                 <span className="text-xl font-bold text-[#4B2E23]">
+    //                   {product.price}
+    //                 </span>
+    //                 {product.originalPrice && (
+    //                   <span className="text-sm line-through text-gray-400">
+    //                     {product.originalPrice}
+    //                   </span>
+    //                 )}
+    //               </div>
+
+    //               {/* Add to Cart Button */}
+    //               <button className="w-full bg-[#4B2E23] hover:bg-[#3a2419] text-[#fefbf7] py-2 px-4 rounded-md text-sm font-medium transition">
+    //                 הוסף לעגלה
+    //               </button>
+    //             </div>
+    //           </div>
+    //         </Link>
+    //       ))}
+    //     </div>
+
+    //     <div className="text-center mt-8">
+    //       <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
+    //         צפו בכל המוצרים
+    //       </button>
+    //       <a href="/productPage">
+    //         <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
+    //           שרית - ניתוב לדף מוצר{" "}
+    //         </button>
+    //       </a>
+    //     </div>
+    //   </div>
+    // </section>
+    // </>
     <section id="products" className="py-16 bg-[#fefbf7]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
@@ -405,11 +522,13 @@ function TrendingProduct() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Equal-height grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {products.map((product) => (
             <Link key={product.id} to={`/product/${product.id}`}>
-              <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group border border-[#e5d5c6] cursor-pointer">
-                <div className="p-6">
+              {/* Make each card fill the available height */}
+              <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group border border-[#e5d5c6] cursor-pointer h-full flex flex-col">
+                <div className="p-6 flex flex-col flex-grow">
                   {/* Badges & Heart */}
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex flex-col gap-2">
@@ -419,15 +538,16 @@ function TrendingProduct() {
                         </span>
                       )}
                       {product.isSale && (
-                        <span className="inline-block text-sm px-3 py-1 rounded-full bg-red-100 text-red-600">
+                        // <span className="inline-block text-sm px-3 py-1 rounded-full bg-red-100 text-red-600">
+                        <span className="inline-block text-sm px-3 py-1 rounded-full bg-[#899682] text-black">
                           מבצע
                         </span>
                       )}
                     </div>
-                    <button className="p-2 text-gray-600 hover:text-red-400 transition">
-                      {/* Heart Icon */}
+                    {/* TODO: REMOVE THE HEART ICON WITHOUT MAKING THE IMAGE GLITCH  */}
+                    <button className="p-2 text-gray-600 hover:text-red-400 transition ">
                       <svg
-                        className="h-4 w-4"
+                        className="h-4 w-4 "
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -436,8 +556,8 @@ function TrendingProduct() {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 
-                          4.5 0 116.364 6.364L12 20.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                          d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5
+                        4.5 0 116.364 6.364L12 20.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
                         />
                       </svg>
                     </button>
@@ -487,10 +607,12 @@ function TrendingProduct() {
                     )}
                   </div>
 
-                  {/* Add to Cart Button */}
-                  <button className="w-full bg-[#4B2E23] hover:bg-[#3a2419] text-[#fefbf7] py-2 px-4 rounded-md text-sm font-medium transition">
-                    הוסף לעגלה
-                  </button>
+                  {/* Push button to bottom */}
+                  <div className="mt-auto">
+                    <button className="w-full bg-[#4B2E23] hover:bg-[#3a2419] text-[#fefbf7] py-2 px-4 rounded-md text-sm font-medium transition">
+                      הוסף לעגלה
+                    </button>
+                  </div>
                 </div>
               </div>
             </Link>

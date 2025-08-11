@@ -198,57 +198,96 @@ const CollectionGrid = () => {
   ];
 
   return (
-    <section
-      className="shopify-section section-editorial-cards py-10 px-1 sm:px-4"
-      dir="ltr"
-    >
-      <div className="section section-blends section-full">
-        <div className="section-stack">
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1.2}
-            breakpoints={{
-              640: { slidesPerView: 2.2 },
-              1000: { slidesPerView: 4 },
-            }}
-            className="scroll-cards"
-          >
-            {collections.map((collection) => (
-              <SwiperSlide key={collection.id}>
-                <a
-                  href={collection.link}
-                  className="scroll-card under-image"
-                  style={{
-                    "--card-title-font": "Helvetica, sans-serif",
-                    "--card-subtitle-font": "sans-serif",
-                    "--card-title-size": "18px",
-                    "--card-subtitle-size": "16px",
-                    "--card-title-color": "26 26 26",
-                    "--card-subtitle-color": "0 0 0",
-                    "--card-text-align": "center",
-                    "--card-overlay-color": "rgba(0, 0, 0, 0.1)",
-                    "--overlay-text-vertical": "flex-end",
-                  }}
-                >
+    // <section
+    //   className="shopify-section section-editorial-cards py-10 px-1 sm:px-4"
+    //   dir="ltr"
+    // >
+    //   <div className="section section-blends section-full">
+    //     <div className="section-stack">
+    //       <Swiper
+    //         spaceBetween={20}
+    //         slidesPerView={1.2}
+    //         breakpoints={{
+    //           640: { slidesPerView: 2.2 },
+    //           1000: { slidesPerView: 4 },
+    //         }}
+    //         className="scroll-cards"
+    //       >
+    //         {collections.map((collection) => (
+    //           <SwiperSlide key={collection.id}>
+    //             <a
+    //               href={collection.link}
+    //               className="scroll-card under-image"
+    //               style={{
+    //                 "--card-title-font": "Helvetica, sans-serif",
+    //                 "--card-subtitle-font": "sans-serif",
+    //                 "--card-title-size": "18px",
+    //                 "--card-subtitle-size": "16px",
+    //                 "--card-title-color": "26 26 26",
+    //                 "--card-subtitle-color": "0 0 0",
+    //                 "--card-text-align": "center",
+    //                 "--card-overlay-color": "rgba(0, 0, 0, 0.1)",
+    //                 "--overlay-text-vertical": "flex-end",
+    //               }}
+    //             >
+    //               <img
+    //                 src={collection.image}
+    //                 alt={collection.title}
+    //                 className="card-image"
+    //                 style={{
+    //                   aspectRatio: "3 / 4",
+    //                   height: "auto",
+    //                   maxHeight: "500px",
+    //                 }}
+    //               />
+    //               <div className="scroll-card-content">
+    //                 <p className="card-title text-center">{collection.title}</p>
+    //                 <p className="card-subtitle"></p>
+    //               </div>
+    //             </a>
+    //           </SwiperSlide>
+    //         ))}
+    //       </Swiper>
+    //     </div>
+    //   </div>
+    // </section>
+
+    <section className="py-10 px-1 sm:px-4" dir="ltr">
+      <div className="max-w-screen-2xl mx-auto">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1.2}
+          breakpoints={{
+            640: { slidesPerView: 2.2 },
+            1000: { slidesPerView: 4 },
+          }}
+        >
+          {collections.map((c) => (
+            <SwiperSlide key={c.id} className="h-auto">
+              {/* Clean square card container */}
+              <a
+                href={c.link}
+                className="group block bg-white  overflow-hidden"
+              >
+                {/* Square image wrapper */}
+                <div className="relative w-full aspect-square bg-neutral-50">
                   <img
-                    src={collection.image}
-                    alt={collection.title}
-                    className="card-image"
-                    style={{
-                      aspectRatio: "3 / 4",
-                      height: "auto",
-                      maxHeight: "500px",
-                    }}
+                    src={c.image}
+                    alt={c.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
                   />
-                  <div className="scroll-card-content">
-                    <p className="card-title text-center">{collection.title}</p>
-                    <p className="card-subtitle"></p>
-                  </div>
-                </a>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+                </div>
+
+                {/* Info text */}
+                <div className="p-3 sm:p-4">
+                  {/* <p className="text-center text-neutral-900 text-base sm:text-lg font-medium"> */}
+                  <p className="text-center">{c.title}</p>
+                </div>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

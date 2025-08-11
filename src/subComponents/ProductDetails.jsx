@@ -113,7 +113,7 @@ function ProductDetails({ name, price, colors, description, features = [] }) {
           </button>
 
           {/* Favorite */}
-          <button
+          {/* <button
             onClick={() => setIsFavorite(!isFavorite)}
             className={`h-12 px-4 rounded-lg border transition ${
               isFavorite ? "text-red-500 border-red-300" : "border-gray-300"
@@ -133,7 +133,7 @@ function ProductDetails({ name, price, colors, description, features = [] }) {
               4.5 0 116.364 6.364L12 20.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 
