@@ -102,6 +102,7 @@ function Hero() {
     //   <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent"></div>
     // </section>
 
+    // TODO: FIX THE 2 IMAGES ON SMMALL AND ON BIG SIZES DISPALY
     <section className="relative min-h-[100vh] overflow-hidden">
       {/* Swiper Background Layer */}
       <div className="absolute inset-0 z-0">
@@ -116,7 +117,6 @@ function Hero() {
             <a href="/shop">
               <img
                 src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-                // src="https://ik.imagekit.io/etcjxhfhp/56d86d16-1701-4495-8a92-e54a60c3afc1.jpg?updatedAt=1754512513542"
                 className="w-full h-full object-cover"
                 alt="bg1"
               />
@@ -126,13 +126,12 @@ function Hero() {
             <img
               // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
               src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
               alt="bg2"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              // src="https://ik.imagekit.io/etcjxhfhp/example3.jpg"
               src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
               className="w-full h-full object-cover"
               alt="bg3"

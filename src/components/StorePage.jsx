@@ -22,6 +22,7 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ProductFeatures from "../subComponents/ProductFeatures";
+import StoreTopics from "../subComponents/StoreTopics";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -37,40 +38,77 @@ const sortOptions = [
 //   { name: "Hip Bags", href: "#" },
 //   { name: "Laptop Sleeves", href: "#" },
 // ];
+// const filters = [
+//   {
+//     id: "color",
+//     name: "Color",
+//     options: [
+//       { value: "white", label: "White", checked: false },
+//       { value: "beige", label: "Beige", checked: false },
+//       { value: "blue", label: "Blue", checked: true },
+//       { value: "brown", label: "Brown", checked: false },
+//       { value: "green", label: "Green", checked: false },
+//       { value: "purple", label: "Purple", checked: false },
+//     ],
+//   },
+//   {
+//     id: "category",
+//     name: "Category",
+//     options: [
+//       { value: "new-arrivals", label: "New Arrivals", checked: false },
+//       { value: "sale", label: "Sale", checked: false },
+//       { value: "travel", label: "Travel", checked: true },
+//       { value: "organization", label: "Organization", checked: false },
+//       { value: "accessories", label: "Accessories", checked: false },
+//     ],
+//   },
+//   {
+//     id: "size",
+//     name: "Size",
+//     options: [
+//       { value: "2l", label: "2L", checked: false },
+//       { value: "6l", label: "6L", checked: false },
+//       { value: "12l", label: "12L", checked: false },
+//       { value: "18l", label: "18L", checked: false },
+//       { value: "20l", label: "20L", checked: false },
+//       { value: "40l", label: "40L", checked: true },
+//     ],
+//   },
+// ];
 const filters = [
   {
     id: "color",
-    name: "Color",
+    name: "צבע",
     options: [
-      { value: "white", label: "White", checked: false },
-      { value: "beige", label: "Beige", checked: false },
-      { value: "blue", label: "Blue", checked: true },
-      { value: "brown", label: "Brown", checked: false },
-      { value: "green", label: "Green", checked: false },
-      { value: "purple", label: "Purple", checked: false },
+      { value: "white", label: "לבן", checked: false },
+      { value: "beige", label: "בז'", checked: false },
+      { value: "blue", label: "כחול", checked: true },
+      { value: "brown", label: "חום", checked: false },
+      { value: "green", label: "ירוק", checked: false },
+      { value: "purple", label: "סגול", checked: false },
     ],
   },
   {
     id: "category",
-    name: "Category",
+    name: "קטגוריה",
     options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
+      { value: "new-arrivals", label: "חדש באתר", checked: false },
+      { value: "sale", label: "מבצע", checked: false },
+      { value: "travel", label: "טיולים", checked: true },
+      { value: "organization", label: "ארגון ואחסון", checked: false },
+      { value: "accessories", label: "אקססוריז", checked: false },
     ],
   },
   {
     id: "size",
-    name: "Size",
+    name: "גודל",
     options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "2l", label: "2 ליטר", checked: false },
+      { value: "6l", label: "6 ליטר", checked: false },
+      { value: "12l", label: "12 ליטר", checked: false },
+      { value: "18l", label: "18 ליטר", checked: false },
+      { value: "20l", label: "20 ליטר", checked: false },
+      { value: "40l", label: "40 ליטר", checked: true },
     ],
   },
 ];
@@ -169,7 +207,15 @@ function StorePage() {
                                   id={`filter-mobile-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   type="checkbox"
-                                  className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  // text-[#351C10] hover:text-[#A06E4B]
+                                  // className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+
+                                  className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white
+    checked:border-[#351C10] checked:bg-[#351C10]
+    indeterminate:border-[#351C10] indeterminate:bg-[#351C10]
+    focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#351C10]
+    disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100
+    forced-colors:appearance-auto"
                                 />
                                 <svg
                                   fill="none"
@@ -210,8 +256,10 @@ function StorePage() {
           </div>
         </Dialog>
 
+        <StoreTopics />
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
+            {/* TODO: add a component of topics  */}
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">
               New Arrivals
             </h1>
@@ -327,7 +375,13 @@ function StorePage() {
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   type="checkbox"
-                                  className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  // className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white 
+  checked:border-[#351C10] checked:bg-[#351C10] 
+  indeterminate:border-[#351C10] indeterminate:bg-[#351C10] 
+  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#351C10] 
+  disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 
+  forced-colors:appearance-auto"
                                 />
                                 <svg
                                   fill="none"

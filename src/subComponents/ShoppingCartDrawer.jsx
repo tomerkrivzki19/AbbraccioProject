@@ -72,7 +72,8 @@ function ShoppingCartDrawer({ isCartOpen, setIsCartOpen }) {
               <form className="relative flex w-full flex-col overflow-hidden bg-white pb-8 pt-6 sm:rounded-lg sm:pb-6 lg:py-8">
                 <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8">
                   <h2 className="text-lg font-medium text-gray-900">
-                    Shopping Cart
+                    {/* Shopping Cart */}
+                    עגלת קניות
                   </h2>
                   <button
                     type="button"
@@ -140,9 +141,9 @@ function ShoppingCartDrawer({ isCartOpen, setIsCartOpen }) {
 
                             <button
                               type="button"
-                              className="mr-4 font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-2"
+                              className="mr-4 sm:mr-0 font-medium text-[#4B2E23] hover:text-[#A06E4B] sm:ml-0 sm:mt-2"
                             >
-                              <span>Remove</span>
+                              <span>הסר</span>
                             </button>
                           </div>
                         </div>
@@ -155,7 +156,8 @@ function ShoppingCartDrawer({ isCartOpen, setIsCartOpen }) {
                   aria-labelledby="summary-heading"
                   className="mt-auto sm:px-6 lg:px-8"
                 >
-                  <div className="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
+                  {/* <div className="bg-gray-50 p-6 sm:rounded-lg sm:p-8"> */}
+                  <div className="bg-[#fce8cd] p-6 sm:rounded-lg sm:p-8">
                     <h2 id="summary-heading" className="sr-only">
                       Order summary
                     </h2>
@@ -187,12 +189,13 @@ function ShoppingCartDrawer({ isCartOpen, setIsCartOpen }) {
                   </div>
                 </section>
 
-                <div className="mt-8 flex justify-end px-4 sm:px-6 lg:px-8">
+                <div className="mt-8 flex justify-start px-4 sm:px-6 lg:px-8 ">
                   <button
                     type="submit"
-                    className="rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                    className="rounded-md border border-transparent bg-[#4B2E23]  px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#A06E4B] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                   >
-                    Continue to Payment
+                    {/* Continue to Payment */}
+                    להמשיך לתשלום
                   </button>
                 </div>
               </form>

@@ -1,25 +1,31 @@
 import React from "react";
 // import { Card, CardContent } from "@/components/ui/card";
+// import svgIComn from "../../public/icons/dimond.svg";
 
 function AboutUs() {
   const features = [
     {
-      icon: "🎨",
+      // icon: "🎨",
+      // icon: "/icons/dimond.svg",
+      icon: "icons/hands-allinged.svg",
       title: "עבודת יד איכותית",
       description: "כל מוצר נוצר בקפידה ובאהבה בידי אומנים מיומנים",
     },
     {
-      icon: "🌱",
+      // icon: "🌱",
+      icon: "icons/hand-tree.svg",
       title: "חומרים טבעיים",
       description: "משתמשים רק בחומרי גלם איכותיים וטבעיים לחלוטין",
     },
     {
-      icon: "🔥",
+      // icon: "🔥",
+      icon: "icons/fire-icon.svg",
       title: "שריפה באיכות גבוהה",
       description: "תהליך שריפה מתקדם המבטיח עמידות ויופי לאורך זמן",
     },
     {
-      icon: "💎",
+      // icon: "💎",
+      icon: "icons/dimond.svg",
       title: "עיצוב ייחודי",
       description: "כל פריט הוא יצירת אמנות בפני עצמה עם אופי ייחודי",
     },
@@ -123,7 +129,12 @@ function AboutUs() {
                 className="rounded-2xl border coffee-shadow border-coffee-warm/20 hover:coffee-shadow-elegant transition-all duration-300 bg-white transform hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="p-6 text-center">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  {/* <div className="text-4xl mb-4">{feature.icon}</div> */}
+                  <img
+                    src={feature.icon.replace(/^\/public\//, "/")}
+                    alt={feature.title}
+                    className="w-12 h-12 mb-4 mx-auto"
+                  />
                   <h3 className="font-semibold text-lg mb-2 text-coffee-primary">
                     {feature.title}
                   </h3>

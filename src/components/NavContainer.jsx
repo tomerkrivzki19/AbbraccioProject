@@ -113,6 +113,7 @@ function NavContainer() {
     <div
       className={`fixed z-40 w-full transition duration-300 ease-in-out ${
         hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
+        // hasScrolled ? "bg-white  shadow" : "bg-transparent"
       }`}
     >
       {/* Mobile menu */}
@@ -394,7 +395,14 @@ function NavContainer() {
                           <Popover key={category.name} className="flex">
                             <div className="relative flex">
                               {/* FIXME: The store btn padding */}
-                              <PopoverButton className="p-3 group relative flex items-center justify-center   text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-[#351C10]">
+                              {/* //                       className={`fixed z-40 w-full transition duration-300 ease-in-out ${ */}
+                              {/* //   hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
+                            // }`} */}
+                              <PopoverButton
+                                className={`p-3 group relative flex items-center justify-center text-sm font-medium  transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-[#351C10] ${
+                                  hasScrolled ? " text-gray-700" : "text-white"
+                                }`}
+                              >
                                 {category.name}
                                 <span
                                   aria-hidden="true"
@@ -539,7 +547,9 @@ function NavContainer() {
                             href={page.href}
                             // FIXME: the width of the topics in big sizes screens
                             // className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 text-center center bg-red-100"
-                            className="flex items-center justify-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 h-10 text-center "
+                            className={`flex items-center justify-center text-sm font-medium  hover:text-gray-800 w-28 h-10 text-center ${
+                              hasScrolled ? " text-gray-700" : "text-white"
+                            }`}
                           >
                             {page.name}
                           </a>
