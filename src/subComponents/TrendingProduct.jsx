@@ -229,53 +229,60 @@ function TrendingProduct() {
           {/* Customers also bought */}
           הבחירות הפופולריות של הלקוחות
         </h2>
+        <a href="/productPage">
+          <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+            {products.map((product) => (
+              <div key={product.id}>
+                <div className="relative">
+                  <div className="relative h-72 w-full overflow-hidden rounded-lg">
+                    <img
+                      alt={product.imageAlt}
+                      src={product.imageSrc}
+                      className="size-full object-cover"
+                    />
+                  </div>
+                  <div className="relative mt-4">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {product.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">
+                      {product.color}
+                    </p>
+                  </div>
+                  <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
+                    />
+                    <p className="relative text-lg font-semibold text-white">
+                      {product.price}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <a
+                    href={product.href}
+                    className="relative flex items-center justify-center rounded-md border border-transparent bg-[#4B2E23] px-8 py-2 text-sm font-medium text-white hover:bg-[#A06E4B]"
+                  >
+                    הוסף לסל<span className="sr-only">, {product.name}</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </a>
 
-        <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <div key={product.id}>
-              <div className="relative">
-                <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                  <img
-                    alt={product.imageAlt}
-                    src={product.imageSrc}
-                    className="size-full object-cover"
-                  />
-                </div>
-                <div className="relative mt-4">
-                  <h3 className="text-sm font-medium text-gray-900">
-                    {product.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-                </div>
-                <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
-                  />
-                  <p className="relative text-lg font-semibold text-white">
-                    {product.price}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-6">
-                <a
-                  href={product.href}
-                  className="relative flex items-center justify-center rounded-md border border-transparent bg-[#4B2E23] px-8 py-2 text-sm font-medium text-white hover:bg-[#A06E4B]"
-                >
-                  הוסף לסל<span className="sr-only">, {product.name}</span>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* FIXME: ask sarit if she want the this current container inside the site */}
         <div className="text-center mt-8">
-          <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
-            צפו בכל המוצרים
-          </button>
-          <a href="/productPage">
+          <a href="/shop">
+            <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
+              צפו בכל המוצרים
+            </button>
+            {/* <a href="/productPage">
             <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
               שרית - ניתוב לדף מוצר{" "}
             </button>
+          </a> */}
           </a>
         </div>
       </div>

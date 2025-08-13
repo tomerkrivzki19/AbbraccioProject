@@ -376,9 +376,7 @@ function NavContainer() {
                       <span className="sr-only">Your Company</span>
                       {/* FIXME: FIX THE LOGO ADJUSTMENT  */}
                       <img
-                        alt=""
-                        // src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                        // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
+                        alt="logo"
                         src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
                         className="h-18 w-auto max-w-[150px] object-contain"
 
@@ -587,8 +585,7 @@ function NavContainer() {
                   <a href="/" className="lg:hidden">
                     <span className="sr-only">Your Company</span>
                     <img
-                      alt=""
-                      // src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                      alt="logo"
                       src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
                       className="h-16 w-auto"
                     />
