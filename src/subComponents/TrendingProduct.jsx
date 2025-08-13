@@ -260,12 +260,13 @@ function TrendingProduct() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <a
-                    href={product.href}
+                  <button
+                    // href={product.href}//FIXME: older -remove from the array or ajdust the a herf link to other part insdie the project
+                    // onClick={}
                     className="relative flex items-center justify-center rounded-md border border-transparent bg-[#4B2E23] px-8 py-2 text-sm font-medium text-white hover:bg-[#A06E4B]"
                   >
                     הוסף לסל<span className="sr-only">, {product.name}</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}
