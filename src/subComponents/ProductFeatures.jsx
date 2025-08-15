@@ -168,7 +168,8 @@ const CollectionGrid = () => {
       title: "ספלים קרמיים",
       image:
         // "https://s.alicdn.com/@sc04/kf/H4f1d345a4a2d462fb8306fff8c708398o.jpg_720x720q50.jpg",
-        "https://marketplace.canva.com/nvW28/MAEtMSnvW28/1/s2/canva-coffee-in-a-ceramic-mug-MAEtMSnvW28.jpg",
+        // "https://marketplace.canva.com/nvW28/MAEtMSnvW28/1/s2/canva-coffee-in-a-ceramic-mug-MAEtMSnvW28.jpg",
+        "  https://ik.imagekit.io/etcjxhfhp/dd88e685-aae8-4b83-8cd5-20cdaf8d4e42.jpg?updatedAt=1755251794050",
       link: "/shop",
     },
     {

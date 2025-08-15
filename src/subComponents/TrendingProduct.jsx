@@ -230,7 +230,7 @@ function TrendingProduct() {
           הבחירות הפופולריות של הלקוחות
         </h2>
         <a href="/productPage">
-          <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
               <div key={product.id}>
                 <div className="relative">
@@ -241,7 +241,7 @@ function TrendingProduct() {
                       className="size-full object-cover"
                     />
                   </div>
-                  <div className="relative mt-4">
+                  <div className="relative mt-4 text-center">
                     <h3 className="text-sm font-medium text-gray-900">
                       {product.name}
                     </h3>
@@ -259,7 +259,7 @@ function TrendingProduct() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6  flex justify-center">
                   <button
                     // href={product.href}//FIXME: older -remove from the array or ajdust the a herf link to other part insdie the project
                     // onClick={}
@@ -276,7 +276,7 @@ function TrendingProduct() {
         {/* FIXME: ask sarit if she want the this current container inside the site */}
         <div className="text-center mt-8">
           <a href="/shop">
-            <button className="border border-[#4B2E23] text-[#4B2E23] hover:bg-[#4B2E23] hover:text-[#fefbf7] py-3 px-6 rounded-md text-base font-medium transition">
+            <button className="bg-[#4B2E23] text-[white] hover:bg-[#A06E4B] py-3 px-6 rounded-md text-base font-medium transition">
               צפו בכל המוצרים
             </button>
             {/* <a href="/productPage">
