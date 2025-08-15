@@ -1,13 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+// import vercel from "vite-plugin-vercel";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   server: {
-    allowedHosts: [".loca.lt"],
+    allowedHosts: [".loca.lt"], //for the locally run online server
     host: true, // This makes the server accessible on your network
     port: 5173, // Keep the default port (or change it if needed)
   },

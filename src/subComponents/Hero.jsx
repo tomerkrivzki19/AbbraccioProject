@@ -115,71 +115,65 @@ function Hero() {
         >
           <SwiperSlide>
             <a href="/shop">
+              {/* SM–MD image */}
               <img
-                src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-                className="w-full h-full object-cover"
-                alt="bg1"
+                src="https://ik.imagekit.io/etcjxhfhp/sm%20sizes%20-%20white%20text.svg?updatedAt=1755233041470"
+                className="block lg:hidden w-full h-full object-cover  "
+                alt="bg1-sm"
+              />
+              {/* LG+ image */}
+              <img
+                src="https://ik.imagekit.io/etcjxhfhp/sm%20sizes%20-%20white%20text%20lg+%20sizes%20%20(1).svg?updatedAt=1755233174285"
+                className="hidden lg:block w-full h-full object-cover "
+                alt="bg1-lg"
               />
             </a>
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              // src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-              src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
-              className="w-full h-full object-cover "
-              alt="bg2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://media.istockphoto.com/id/974601902/vector/empty-gray-studio-room-used-as-background-for-display-your-products.jpg?s=612x612&w=0&k=20&c=Kdj2e3LCSHXzCpybu0DYSfZk60FusfmkhoIt7I4iDtI="
-              className="w-full h-full object-cover"
-              alt="bg3"
-            />
+            <a href="/shop">
+              <img
+                // src="https://costanova.com/cdn/shop/files/banner-mobile-01_27b70537-e7fd-4dd1-8afc-8c04c567e61f.jpg?v=1754058134&width=800"
+                // src="https://ik.imagekit.io/etcjxhfhp/sm%20shoping%20bag%20brand.png?updatedAt=1755235589642" // not relevnt for now -sm sizes
+                src="https://ik.imagekit.io/etcjxhfhp/shoping%20bag%20brand%20-%20abbracio.svg?updatedAt=1755235086375"
+                className="block lg:hidden w-full h-full object-cover"
+                alt="bg2-sm"
+              />
+              {/* LG+ image */}
+              <img
+                // src="https://costanova.com/cdn/shop/files/banner_b29eafbf-75e2-4814-b358-5a06b7ee23a7.jpg?v=1753950553&width=2000"
+                src="https://ik.imagekit.io/etcjxhfhp/shoping%20bag%20brand%20-%20abbracio.svg?updatedAt=1755235086375"
+                className="hidden lg:block w-full h-full object-cover"
+                alt="bg2-lg"
+              />
+            </a>
           </SwiperSlide>
         </Swiper>
       </div>
 
       {/* Content Layer */}
-      {/* <div className="relative z-10 flex items-center justify-center min-h-[100vh]">
+      {/* FIXME:  bg-blur-[5px]- adjust  */}
+      <div className="relative z-10 flex items-end justify-center min-h-[100vh] pb-28 bg-blur-[5px]">
         <div className="container px-4 text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center mb-8">
-              <img
-                src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
-                alt="AbbraCCio"
-                className="h-20 md:h-24 w-auto"
-              />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              אביזרי קפה קרמיים
-              <br />
-              <span className="text-coffee-rich">בעבודת יד</span>
-            </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          <div className="max-w-4xl mx-auto  ">
+            {/* <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
               גלו את קולקציית אביזרי הקפה הקרמיים המיוחדת שלנו. כל פריט נוצר
               בקפידה ובאהבה כדי להעניק לכם חוויית קפה מושלמת
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"
-                // className="bg-coffee-primary hover:bg-coffee-rich text-coffee-cream shadow-lg hover:shadow-xl transition-all duration-300">
-              >
+            </p> */}
+            <div className="flex  gap-4 justify-center items-center">
+              <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition">
                 צפו במוצרים
               </button>
-              <button
-                className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"
-                // className="border-coffee-primary text-coffee-primary hover:bg-coffee-primary hover:text-coffee-cream">
-              >
-                למדו עלינו יותר
+              {/* <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"> */}
+              <button className="bg-white text-black border border-white px-5 py-2 text-sm hover:bg-transparent hover:text-white transition">
+                קולקציית הקיץ
               </button>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Optional bottom gradient fade */}
-      {/* <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/50 to-transparent z-10" /> */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/50 to-transparent z-10" />
     </section>
   );
 }
