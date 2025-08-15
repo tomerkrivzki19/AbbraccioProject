@@ -300,7 +300,7 @@ function Footer() {
               alt="Company name"
               // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
               // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1754146902110"
-              src="https://ik.imagekit.io/etcjxhfhp/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028158041"
+              src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028252619"
               className="h-18 w-auto max-w-[150px] object-contain"
             />
             <p className="text-balance text-sm/6 text-gray-400">
