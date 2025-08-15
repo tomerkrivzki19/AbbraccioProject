@@ -414,7 +414,7 @@ function NavContainer() {
                               {/* //   hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
                             // }`} */}
                               <PopoverButton
-                                className={`p-3 group relative flex items-center justify-center text-sm font-medium  transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:text-[#351C10] ${
+                                className={`p-3 group relative flex items-center justify-center text-sm font-medium  transition-colors duration-200 ease-out hover:text-[#8B5E3C] data-[open]:text-[#351C10] ${
                                   // hasScrolled ? " text-gray-700" : "text-white"
                                   hasScrolled ? " text-[#F5E1C0]" : "text-white"
                                 }`}
@@ -458,7 +458,8 @@ function NavContainer() {
                                             >
                                               <a
                                                 href={item.href}
-                                                className="hover:text-gray-800"
+                                                // className="hover:text-gray-800"
+                                                className="hover:text-[#8B5E3C]"
                                               >
                                                 {item.name}
                                               </a>
@@ -485,7 +486,8 @@ function NavContainer() {
                                             >
                                               <a
                                                 href={item.href}
-                                                className="hover:text-gray-800"
+                                                // className="hover:text-gray-800"
+                                                className="hover:text-[#8B5E3C]"
                                               >
                                                 {item.name}
                                               </a>
@@ -514,7 +516,8 @@ function NavContainer() {
                                             >
                                               <a
                                                 href={item.href}
-                                                className="hover:text-gray-800"
+                                                // className="hover:text-gray-800"
+                                                className="hover:text-[#8B5E3C]"
                                               >
                                                 {item.name}
                                               </a>
@@ -542,7 +545,8 @@ function NavContainer() {
                                             >
                                               <a
                                                 href={item.href}
-                                                className="hover:text-gray-800"
+                                                // className="hover:text-gray-800"
+                                                className="hover:text-[#8B5E3C]"
                                               >
                                                 {item.name}
                                               </a>
@@ -563,7 +567,7 @@ function NavContainer() {
                             href={page.href}
                             // FIXME: the width of the topics in big sizes screens
                             // className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 text-center center bg-red-100"
-                            className={`flex items-center justify-center text-sm font-medium  hover:text-gray-800 w-28 h-10 text-center ${
+                            className={`flex items-center justify-center text-sm font-medium  hover:text-[#8B5E3C] w-28 h-10 text-center ${
                               // hasScrolled ? " text-gray-700" : "text-white"
                               hasScrolled ? " text-[#F5E1C0]" : "text-white"
                             }`}
@@ -614,7 +618,7 @@ function NavContainer() {
                       src={
                         hasScrolled
                           ? abraccioLogoTrasparent
-                          : whiteLogoAbrraccio
+                          : whiteLogoAbrraccio //552x452 TODO: need to resize
                       }
                       // src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028252619"
                       className="h-16 w-auto text-black"
@@ -629,7 +633,7 @@ function NavContainer() {
                             // href="#"
                             onClick={() => setIsCommandPatternsOpen(true)}
                             // className="-m-2 p-2 text-gray-400 hover:text-gray-500"
-                            className={`-m-2 p-2  ${
+                            className={`-m-2 p-2 hover:text-[#8B5E3C] ${
                               hasScrolled ? " text-[#F5E1C0]" : "text-white"
                             }`}
                           >
@@ -657,7 +661,7 @@ function NavContainer() {
                       <button
                         onClick={() => setIsCommandPatternsOpen(true)}
                         // className=" p-2  text-gray-400 hover:text-gray-500  block lg:hidden "
-                        className={` p-2    block lg:hidden ${
+                        className={` p-2    block lg:hidden hover:text-[#8B5E3C] ${
                           hasScrolled ? " text-[#F5E1C0]" : "text-white"
                         } `}
                       >
@@ -692,7 +696,7 @@ function NavContainer() {
                           <ShoppingCartIcon
                             aria-hidden="true"
                             // className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
-                            className={`size-6 shrink-0  ${
+                            className={`size-6 shrink-0 hover:text-[#8B5E3C] ${
                               hasScrolled ? " text-[#F5E1C0]" : "text-white"
                             }`}
                           />
