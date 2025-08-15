@@ -377,7 +377,9 @@ function NavContainer() {
                       {/* FIXME: FIX THE LOGO ADJUSTMENT  */}
                       <img
                         alt="logo"
-                        src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                        // FIXME: this utr not working on vercel or server  runing the site for some reasone
+                        // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                        src="https://ik.imagekit.io/etcjxhfhp/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028158041"
                         className="h-18 w-auto max-w-[150px] object-contain"
 
                         // className="h-8 w-auto"
@@ -586,7 +588,9 @@ function NavContainer() {
                     <span className="sr-only">Your Company</span>
                     <img
                       alt="logo"
-                      src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                      // FIXME: fix the logo crash on server
+                      // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                      src="https://ik.imagekit.io/etcjxhfhp/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028158041"
                       className="h-16 w-auto"
                     />
                   </a>
