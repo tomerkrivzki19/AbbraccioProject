@@ -167,9 +167,7 @@ const CollectionGrid = () => {
       id: 1,
       title: "ספלים קרמיים",
       image:
-        // "https://s.alicdn.com/@sc04/kf/H4f1d345a4a2d462fb8306fff8c708398o.jpg_720x720q50.jpg",
-        // "https://marketplace.canva.com/nvW28/MAEtMSnvW28/1/s2/canva-coffee-in-a-ceramic-mug-MAEtMSnvW28.jpg",
-        "  https://ik.imagekit.io/etcjxhfhp/dd88e685-aae8-4b83-8cd5-20cdaf8d4e42.jpg?updatedAt=1755251794050",
+        "https://ik.imagekit.io/etcjxhfhp/dd88e685-aae8-4b83-8cd5-20cdaf8d4e42.jpg?updatedAt=1755251794050",
       link: "/shop",
     },
     {
@@ -177,23 +175,27 @@ const CollectionGrid = () => {
       title: "כוסות אספרסו",
       image:
         // "https://s.alicdn.com/@sc04/kf/H03e84a7397544a2c9378a9d854c01578q.jpg_720x720q50.jpg",
-        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/9659852/2.jpg?0957",
+        // "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/9659852/2.jpg?0957",
+        "https://ik.imagekit.io/etcjxhfhp/4b3f5f49-245c-47ae-bca3-96203d127bc3.jpg?updatedAt=1755351658890",
+
       link: "/shop",
     },
     {
       id: 3,
-      title: "כוסות תה / סיניות",
+      title: "כוסות קפוצ'ינו",
       image:
         // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
-        "https://marketplace.canva.com/EmTnA/MAGcu4EmTnA/1/s2/canva-japanese-ceramics%3A-two-handmade-tea-cups-MAGcu4EmTnA.jpg",
+        // "https://marketplace.canva.com/EmTnA/MAGcu4EmTnA/1/s2/canva-japanese-ceramics%3A-two-handmade-tea-cups-MAGcu4EmTnA.jpg",
+        "https://ik.imagekit.io/etcjxhfhp/109a7eb3-6f39-4207-834b-e5cb8b5f5773.jpg?updatedAt=1755351658886",
       link: "/shop",
     },
     {
       id: 4,
-      title: "מארזים / סטים",
+      title: "סטים מושלמים לקפה",
       image:
         // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
-        "https://shop-chopsticks.com/cdn/shop/files/S35b8e18fedad496eb001d9e9c0b6cbd5y_800x.webp?v=1729103757",
+        // "https://shop-chopsticks.com/cdn/shop/files/S35b8e18fedad496eb001d9e9c0b6cbd5y_800x.webp?v=1729103757",
+        "https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1755028283762",
       link: "/shop",
     },
   ];

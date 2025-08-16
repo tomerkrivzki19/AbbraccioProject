@@ -618,7 +618,7 @@ function NavContainer() {
                       src={
                         hasScrolled
                           ? abraccioLogoTrasparent
-                          : whiteLogoAbrraccio //552x452 TODO: need to resize
+                          : whiteLogoAbrraccio //  TODO: need to resize
                       }
                       // src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028252619"
                       className="h-16 w-auto text-black"

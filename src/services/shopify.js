@@ -13,39 +13,73 @@ const headers = {
 };
 
 // * Create a get first | top 5 req - FIXME: make it 4 or 5 check when the products are ready
-export async function getTop5Products() {
+export async function getTop4Products() {
   try {
+    // const query = `
+    //       {
+    //         products(first: 4) {
+    //           edges {
+    //             node {
+    //               id
+    //               title
+    //               handle
+    //               description
+    //               images(first: 1) {
+    //                 edges {
+    //                   node {
+    //                     url
+    //                     altText
+    //                   }
+    //                 }
+    //               }
+    //               variants(first: 1) {
+    //                 edges {
+    //                   node {
+    //                     price {
+    //                       amount
+    //                       currencyCode
+    //                     }
+    //                   }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     `;
+
     const query = `
-          {
-            products(first: 5) {
-              edges {
-                node {
-                  id
-                  title
-                  handle
-                  description
-                  images(first: 1) {
-                    edges {
-                      node {
-                        url
-                        altText
-                      }
-                    }
-                  }
-                  variants(first: 1) {
-                    edges {
-                      node {
-                        price {
-                          amount
-                          currencyCode
-                        }
-                      }
-                    }
-                  }
-                }
+  {
+  products(first: 4, sortKey: CREATED_AT, reverse: true) {
+    edges {
+      node {
+        id
+        title
+        handle
+        description
+        images(first: 1) {
+          edges {
+            node {
+              url
+              altText
+            }
+          }
+        }
+        variants(first: 1) {
+          edges {
+            node {
+              price {
+                amount
+                currencyCode
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
         `;
 
     const res = await fetch(SHOPIFY_API_URL, {
