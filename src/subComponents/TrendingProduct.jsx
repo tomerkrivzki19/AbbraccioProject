@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { StarIcon, HeartIcon } from "@heroicons/react/24/solid";
+import { PlusIcon } from "@heroicons/react/20/solid";
 
 function TrendingProduct({ data }) {
   // TODO: new version of products
@@ -127,7 +128,8 @@ function TrendingProduct({ data }) {
     // </div>
 
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      {/* <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"> */}
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-xl font-bold text-gray-900">
           הבחירות הפופולריות של הלקוחות
         </h2>
@@ -180,9 +182,31 @@ function TrendingProduct({ data }) {
 
         <div className="text-center mt-8">
           <a href="/shop">
-            <button className="bg-[#4B2E23] text-[white] hover:bg-[#A06E4B] py-3 px-6 rounded-md text-base font-medium transition">
+            {/* <button className="bg-[#4B2E23] text-[white] hover:bg-[#A06E4B] py-3 px-6 rounded-md text-base font-medium transition">
               צפו בכל המוצרים
-            </button>
+            </button> */}
+            <div className="flex items-center">
+              <div
+                aria-hidden="true"
+                className="w-full border-t border-gray-300 dark:border-white/15"
+              />
+              <div className="relative flex justify-center">
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-x-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300  hover:bg-[#A06E4B]  hover:text-white cursor-pointer dark:bg-white/10 dark:text-white dark:shadow-none dark:ring-white/5 dark:hover:bg-white/20"
+                >
+                  לעוד מוצרים
+                  <PlusIcon
+                    aria-hidden="true"
+                    className="-ml-1 -mr-0.5 size-5  text-[#4B2E23]"
+                  />
+                </button>
+              </div>
+              <div
+                aria-hidden="true"
+                className="w-full border-t border-gray-300 dark:border-white/10"
+              />
+            </div>
           </a>
         </div>
       </div>

@@ -160,13 +160,17 @@ function Hero() {
               בקפידה ובאהבה כדי להעניק לכם חוויית קפה מושלמת
             </p> */}
             <div className="flex  gap-4 justify-center items-center">
-              <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition">
-                צפו במוצרים
-              </button>
-              {/* <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"> */}
-              <button className="bg-white text-black border border-white px-5 py-2 text-sm hover:bg-transparent hover:text-white transition">
-                קולקציית הקיץ
-              </button>
+              <a href="/shop">
+                <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition cursor-pointer">
+                  צפו במוצרים
+                </button>
+              </a>
+              <a href="/shop">
+                {/* <button className="text-white border border-white px-5 py-2 text-sm hover:bg-white hover:text-black transition"> */}
+                <button className="bg-white text-black border border-white px-5 py-2 text-sm hover:bg-transparent hover:text-white transition cursor-pointer">
+                  קולקציית הקיץ
+                </button>
+              </a>
             </div>
           </div>
         </div>

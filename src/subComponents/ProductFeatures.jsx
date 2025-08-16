@@ -174,7 +174,6 @@ const CollectionGrid = () => {
       id: 2,
       title: "כוסות אספרסו",
       image:
-        // "https://s.alicdn.com/@sc04/kf/H03e84a7397544a2c9378a9d854c01578q.jpg_720x720q50.jpg",
         // "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/9659852/2.jpg?0957",
         "https://ik.imagekit.io/etcjxhfhp/4b3f5f49-245c-47ae-bca3-96203d127bc3.jpg?updatedAt=1755351658890",
 
@@ -186,7 +185,8 @@ const CollectionGrid = () => {
       image:
         // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
         // "https://marketplace.canva.com/EmTnA/MAGcu4EmTnA/1/s2/canva-japanese-ceramics%3A-two-handmade-tea-cups-MAGcu4EmTnA.jpg",
-        "https://ik.imagekit.io/etcjxhfhp/109a7eb3-6f39-4207-834b-e5cb8b5f5773.jpg?updatedAt=1755351658886",
+        // "https://ik.imagekit.io/etcjxhfhp/109a7eb3-6f39-4207-834b-e5cb8b5f5773.jpg?updatedAt=1755351658886",
+        "https://ik.imagekit.io/etcjxhfhp/20af6a8d-04b6-43db-9aaf-83db53ea2ed7.jpg?updatedAt=1755373885887",
       link: "/shop",
     },
     {
@@ -255,7 +255,7 @@ const CollectionGrid = () => {
     //   </div>
     // </section>
 
-    <section className="py-10 px-1 sm:px-4" dir="ltr">
+    <section className="py-5 px-1 sm:px-4" dir="ltr">
       <div className="max-w-screen-2xl mx-auto">
         <Swiper
           spaceBetween={20}
