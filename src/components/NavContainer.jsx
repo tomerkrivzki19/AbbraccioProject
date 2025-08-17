@@ -118,9 +118,9 @@ function NavContainer() {
     // FIXME: make the topics in center for sm > screens
     <div
       className={`fixed z-40 w-full transition duration-300 ease-in-out ${
-        // hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
+        hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
         // hasScrolled ? "bg-[#4b2e2b]  shadow" : "bg-transparent" // relevnt -
-        hasScrolled ? "bg-[#d9b382]  shadow" : "bg-transparent"
+        // hasScrolled ? "bg-[#d9b382]  shadow" : "bg-transparent"
         // hasScrolled ? "bg-white  shadow" : "bg-transparent"
       }`}
     >
@@ -376,7 +376,11 @@ function NavContainer() {
           {/* Secondary navigation */}
           <div className="">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="border-b border-gray-200 pb-2">
+              <div
+                className={`pb-2 border-gray-200 ${
+                  hasScrolled ? "border-none" : "border-b"
+                }`}
+              >
                 <div className="flex h-16 items-center  w-full">
                   {/* Logo (lg+) */}
                   <div className="hidden   flex-1  lg:flex lg:items-center">
@@ -386,12 +390,12 @@ function NavContainer() {
                       <img
                         alt="logo"
                         // FIXME: this utr not working on vercel or server  runing the site for some reasone
-                        // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
-                        src={
-                          hasScrolled
-                            ? abraccioLogoTrasparent
-                            : whiteLogoAbrraccio
-                        }
+                        src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                        // src={
+                        //   hasScrolled
+                        //     ? abraccioLogoTrasparent
+                        //     : whiteLogoAbrraccio
+                        // }
                         // src={abraccioLogoTrasparent}
                         // src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/19604ca8-7c3b-4189-b50b-78f0068da5c6.png?updatedAt=1755245851791" // src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028252619"
 
@@ -409,14 +413,14 @@ function NavContainer() {
                         {navigation.categories.map((category, categoryIdx) => (
                           <Popover key={category.name} className="flex">
                             <div className="relative flex">
-                              {/* FIXME: The store btn padding */}
                               {/* //                       className={`fixed z-40 w-full transition duration-300 ease-in-out ${ */}
                               {/* //   hasScrolled ? "bg-[#fce8cd]  shadow" : "bg-transparent"
                             // }`} */}
+                              {/* FIXME: fix the colors of the btns  */}
                               <PopoverButton
                                 className={`p-3 group relative flex items-center justify-center text-sm font-medium  transition-colors duration-200 ease-out hover:text-[#8B5E3C] data-[open]:text-[#351C10] ${
                                   // hasScrolled ? " text-gray-700" : "text-white"
-                                  hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                                  hasScrolled ? " text-[#8B5E3C]" : "text-white"
                                 }`}
                               >
                                 {category.name}
@@ -569,7 +573,8 @@ function NavContainer() {
                             // className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800 w-28 text-center center bg-red-100"
                             className={`flex items-center justify-center text-sm font-medium  hover:text-[#8B5E3C] w-28 h-10 text-center ${
                               // hasScrolled ? " text-gray-700" : "text-white"
-                              hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              // hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              hasScrolled ? " text-[#8B5E3C]" : "text-white"
                             }`}
                           >
                             {page.name}
@@ -586,7 +591,8 @@ function NavContainer() {
                       onClick={() => setOpen(true)}
                       // className="-ml-2 rounded-md bg-white p-2 text-gray-400"
                       className={`-ml-2 rounded-md  p-2 ${
-                        hasScrolled ? "bg-[#F5E1C0]" : "bg-white"
+                        // hasScrolled ? "bg-[#F5E1C0]" : "bg-white"
+                        hasScrolled ? " text-[#8B5E3C]" : "text-white"
                       }`}
                     >
                       <span className="sr-only">Open menu</span>
@@ -612,14 +618,13 @@ function NavContainer() {
                     <span className="sr-only">Your Company</span>
                     <img
                       alt="logo"
-                      // FIXME: fix the logo crash on server
-                      // src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
+                      src="https://ik.imagekit.io/etcjxhfhp/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1754147437854"
                       // src={abraccioLogo}
-                      src={
-                        hasScrolled
-                          ? abraccioLogoTrasparent
-                          : whiteLogoAbrraccio //  TODO: need to resize
-                      }
+                      // src={
+                      //   hasScrolled
+                      //     ? abraccioLogoTrasparent
+                      //     : whiteLogoAbrraccio //  TODO: need to resize
+                      // }
                       // src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/26d74fa9-4445-413b-bdfe-cb89b2a807b3-removebg-preview.png?updatedAt=1755028252619"
                       className="h-16 w-auto text-black"
                     />
@@ -634,7 +639,8 @@ function NavContainer() {
                             onClick={() => setIsCommandPatternsOpen(true)}
                             // className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                             className={`-m-2 p-2 hover:text-[#8B5E3C] ${
-                              hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              // hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              hasScrolled ? " text-[#8B5E3C]" : "text-white"
                             }`}
                           >
                             <span className="sr-only">Search</span>
@@ -662,7 +668,8 @@ function NavContainer() {
                         onClick={() => setIsCommandPatternsOpen(true)}
                         // className=" p-2  text-gray-400 hover:text-gray-500  block lg:hidden "
                         className={` p-2    block lg:hidden hover:text-[#8B5E3C] ${
-                          hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                          // hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                          hasScrolled ? " text-[#8B5E3C]" : "text-white"
                         } `}
                       >
                         <span className="sr-only">Search</span>
@@ -697,13 +704,15 @@ function NavContainer() {
                             aria-hidden="true"
                             // className="size-6 shrink-0 text-gray-400 group-hover:text-gray-500"
                             className={`size-6 shrink-0 hover:text-[#8B5E3C] ${
-                              hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              // hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              hasScrolled ? " text-[#8B5E3C]" : "text-white"
                             }`}
                           />
                           <span
                             // className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
                             className={`ml-2 text-sm font-medium  ${
-                              hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              // hasScrolled ? " text-[#F5E1C0]" : "text-white"
+                              hasScrolled ? " text-[#8B5E3C]" : "text-white"
                             }`}
                           >
                             0

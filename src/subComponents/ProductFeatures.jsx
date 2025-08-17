@@ -175,7 +175,7 @@ const CollectionGrid = () => {
       title: "כוסות אספרסו",
       image:
         // "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/78/9659852/2.jpg?0957",
-        "https://ik.imagekit.io/etcjxhfhp/4b3f5f49-245c-47ae-bca3-96203d127bc3.jpg?updatedAt=1755351658890",
+        "https://ik.imagekit.io/etcjxhfhp/aa8009bc-f343-4f34-b927-1fa4fbf391b0.jpg?updatedAt=1755460882292",
 
       link: "/shop",
     },
@@ -184,8 +184,6 @@ const CollectionGrid = () => {
       title: "כוסות קפוצ'ינו",
       image:
         // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
-        // "https://marketplace.canva.com/EmTnA/MAGcu4EmTnA/1/s2/canva-japanese-ceramics%3A-two-handmade-tea-cups-MAGcu4EmTnA.jpg",
-        // "https://ik.imagekit.io/etcjxhfhp/109a7eb3-6f39-4207-834b-e5cb8b5f5773.jpg?updatedAt=1755351658886",
         "https://ik.imagekit.io/etcjxhfhp/20af6a8d-04b6-43db-9aaf-83db53ea2ed7.jpg?updatedAt=1755373885887",
       link: "/shop",
     },
@@ -193,9 +191,8 @@ const CollectionGrid = () => {
       id: 4,
       title: "סטים מושלמים לקפה",
       image:
-        // "https://s.alicdn.com/@sc04/kf/H4966363c18cd4fb895ad5b719a9a67e8Y.jpg_720x720q50.jpg",
-        // "https://shop-chopsticks.com/cdn/shop/files/S35b8e18fedad496eb001d9e9c0b6cbd5y_800x.webp?v=1729103757",
-        "https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1755028283762",
+        // "https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/628a8987-d318-4e4e-87a6-b7a944fde01b.jpg?updatedAt=1755028283762",
+        "https://ik.imagekit.io/etcjxhfhp/1faa7247-93c6-4a92-b72e-277af7d970de.jpg?updatedAt=1755461146363",
       link: "/shop",
     },
   ];
