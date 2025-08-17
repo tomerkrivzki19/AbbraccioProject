@@ -107,7 +107,14 @@ function NavContainer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 0);
+      // setHasScrolled(window.scrollY > 550);
+      if (window.innerWidth < 768) {
+        // Small screens (mobile)
+        setHasScrolled(window.scrollY > 25); // e.g. fire earlier
+      } else {
+        // Big screens (tablet/desktop)
+        setHasScrolled(window.scrollY > 100); // fire later
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

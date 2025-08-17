@@ -19,24 +19,26 @@ function MainPage() {
   // getAllProducts();
   // getProductById("gid://shopify/Product/7345044881511");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getTop4Products();
-        setTopTrendingProducts(data);
-      } catch (err) {
-        console.error("Error fetching products:", err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getTop4Products();
+  //       setTopTrendingProducts(data);
+  //     } catch (err) {
+  //       console.error("Error fetching products:", err);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-  console.log(trendingProducts);
+  // console.log(trendingProducts);
+
   return (
     <>
       <Hero />
-      <TrendingProduct data={trendingProducts} />
+      <TrendingProduct />
+      {/* data={trendingProducts} /> */}
       <ProductFeatures />
       <PromotionalBanner />
       <AboutUs />

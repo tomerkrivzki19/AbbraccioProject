@@ -1,15 +1,33 @@
 import React from "react";
-// import { Star, Heart } from "lucide-react";
+import { useTrendingProducts } from "../hooks/useTrendingProducts";
 import { Link } from "react-router-dom";
-
 import { StarIcon, HeartIcon } from "@heroicons/react/24/solid";
 import { PlusIcon } from "@heroicons/react/20/solid";
 
-function TrendingProduct({ data }) {
-  //
-  const products = data;
-  console.log("data from trending page component", data);
+// function TrendingProduct({ data }) {
+function TrendingProduct() {
+  const { products, loading, error } = useTrendingProducts();
 
+  if (loading)
+    return (
+      <div className="py-24  flex flex-col items-center justify-center text-center">
+        <img
+          src="https://ik.imagekit.io/etcjxhfhp/abbraCCio%20logos/628a8987-d318-4e4e-87a6-b7a944fde01b-removebg-preview.png?updatedAt=1755028271813"
+          alt="לוגו חברה טעינה"
+          className=" animate-[spin_2s_linear_infinite] w-24 h-24"
+        />
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="py-62 flex flex-col justify-cnenter text-center">
+        <p className="w-full text-red-500">{error} please return later</p>
+        <h1 className="w-full text-md font-bold" dir="ltr">
+          500 err
+        </h1>
+      </div>
+    );
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:max-w-7xl lg:px-8">
